@@ -14,7 +14,7 @@ const Footer = () => {
           </a>
         </MenuWrapper>
         <PhoneNumberWrapper>
-        <a target="_blank" rel="noreferrer" href="tel:1‪(801)923-8133‬">Call: ‪(801)923-8133‬</a> | <a target="_blank" rel="noreferrer" href="sms:1‪(801)923-8133‬">Text: ‪(801)923-8133‬</a>
+        <a target="_blank" rel="noreferrer" href="tel:1‪(000)000-0000‬">Call: ‪(000)000-0000‬</a> | <a target="_blank" rel="noreferrer" href="sms:1‪(000)000-0000‬">Text: ‪(000)000-0000‬</a>
         </PhoneNumberWrapper>
   
         <MySignWrapper>HELP THE NEXT (HTN) &copy; 2022 | Developed by Kwaku Appau-Nkansah</MySignWrapper>
