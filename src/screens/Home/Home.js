@@ -8,6 +8,7 @@ const Home = () => {
     <MainWrapper className='container'>
       <OurStory />
       <AboutUs />
+      <h4>Contact Us</h4>
     </MainWrapper>
   )
 }
