@@ -1,9 +1,13 @@
 import { MainWrapper } from './home.styles';
+import OurStory from '../../components/Our-Story/OurStory';
+import AboutUs from '../../components/About-Us/AboutUs';
+
 
 const Home = () => {
   return (
-    <MainWrapper>
-      <div>Home</div>
+    <MainWrapper className='container'>
+      <OurStory />
+      <AboutUs />
     </MainWrapper>
   )
 }

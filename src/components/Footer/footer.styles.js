@@ -9,7 +9,7 @@ font-size: 16px;
 padding: 20px;
 margin-top: -16px;
 text-align: center;
-color: white;
+/* color: white; */
 `;
 
 export const MenuWrapper = styled.p`
@@ -28,7 +28,7 @@ export const PhoneNumberWrapper = styled.p`
 `;
 
 export const MySignWrapper = styled.p`
-color: rgb(185, 185, 185);
+/* color: rgb(185, 185, 185); */
 font-weight: lighter;
 font-size: .7rem;
 opacity: .5;
