@@ -1,11 +1,11 @@
 import { Outlet, NavLink } from 'react-router-dom';
-import { MainWrapper, LogoImageWrapper } from './header.styles';
+import { LogoImageWrapper } from './header.styles';
 import Logo from '../../assets/logo512.png';
 
 const Header = () => {
   return (
     <>
-      <MainWrapper className="navbar navbar-expand-md navbar-light shadow sticky-top">
+      <nav className="navbar navbar-expand-md navbar-light shadow sticky-top">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
             <LogoImageWrapper
@@ -39,7 +39,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </MainWrapper>
+      </nav>
       <Outlet />
     </>
   );
