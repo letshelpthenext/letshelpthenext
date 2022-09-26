@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
 import HomeScreen from './screens/Home/Home';
 import GetInvolvedScreen from './screens/Get-Involved/GetInvolved';
 import OurWorkScreen from './screens/Our-Work/OurWork';
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Header />}>
+        <Route path="/" element={<Hero />}>
           <Route index element={<HomeScreen />} />
           <Route path='get-involved' element={<GetInvolvedScreen />} />
           <Route path='our-work' element={<OurWorkScreen />} />
