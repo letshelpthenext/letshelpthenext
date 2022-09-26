@@ -1,8 +1,11 @@
-import { MainWrapper } from './ourstory.styles';
+import { MainWrapper, CaptionBox, ContentBox } from './ourstory.styles';
 
 const OurStory = () => (
   <MainWrapper>
-    <h4>Our Story</h4>
+    <CaptionBox className="bg-info p-3">
+      <h4>Our Story</h4>
+    </CaptionBox>
+    <ContentBox>
       <p>
         International students, seeking opportunities that their home countries
         do not offer, often face dreadful financial crises and a lack of
@@ -30,6 +33,7 @@ const OurStory = () => (
         teaching them self-reliance to create a life for themselves and to bring
         hope to their communities is our objective.
       </p>
+    </ContentBox>
   </MainWrapper>
 );
 
