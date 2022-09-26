@@ -5,7 +5,7 @@ import AboutUs from '../../components/About-Us/AboutUs';
 
 const Home = () => {
   return (
-    <MainWrapper className='container'>
+    <MainWrapper>
       <OurStory />
       <AboutUs />
       <h4>Contact Us</h4>
