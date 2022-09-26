@@ -1,11 +1,11 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { LogoImageWrapper } from './header.styles';
 import Logo from '../../assets/logo512.png';
 
 const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-md navbar-light shadow sticky-top">
+      <nav className="navbar navbar-expand-md navbar-dark bg-opacity-10 sticky-top">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
             <LogoImageWrapper
@@ -15,7 +15,7 @@ const Header = () => {
             />
           </NavLink>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -40,7 +40,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <Outlet />
     </>
   );
 };
