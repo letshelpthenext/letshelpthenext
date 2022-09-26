@@ -1,10 +1,12 @@
-import { MainWrapper } from './aboutUs.styles';
+import { MainWrapper, CaptionBox, ContentBox } from './aboutUs.styles';
 
 const AboutUs = () => {
   return (
     <MainWrapper>
+      <CaptionBox className="bg-warning p-3">
       <h4>About Us</h4>
-      <div>
+    </CaptionBox>
+    <ContentBox>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           suscipit pellentesque erat, eu luctus arcu scelerisque eu. Nullam
@@ -32,7 +34,7 @@ const AboutUs = () => {
           in. Proin eu vulputate ipsum, quis pellentesque enim. Donec aliquam
           dictum nisl feugiat lobortis.
         </p>
-      </div>
+      </ContentBox>
     </MainWrapper>
   );
 };

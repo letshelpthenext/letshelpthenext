@@ -7,10 +7,6 @@ export const MainWrapper = styled.div`
   flex-direction: row;
   margin-bottom: 3rem;
 
-  >h4 {
-    text-align: center;
-  }
-
   ${media.small`
     flex-direction: column;
   `}
@@ -24,6 +20,9 @@ export const CaptionBox = styled.div`
 `;
 
 export const ContentBox = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 3rem;
   border: 1px solid #1F9BCF;
   /* border-left: 0; */
   border-radius: 0px 10px 10px 0px;
