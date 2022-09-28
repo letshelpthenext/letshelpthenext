@@ -29,8 +29,8 @@ const Hero = () => {
 
   const setHeroText = () => {
     if (location.pathname === '/') {
-      setBigText('Home');
-      setSmallText('Pass on the good');
+      setBigText('You Are Not Alone');
+      setSmallText('We are with you every step');
       return homeImage;
     }
     if (location.pathname === '/get-involved') {
