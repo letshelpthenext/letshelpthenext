@@ -33,3 +33,16 @@ export const ContentBox = styled.div`
     border-radius: 0px 0px 10px 10px;
   `}
 `;
+
+export const CardWrapper = styled.div`
+width: 50%;
+background-color: white;
+border-radius: 10px;
+margin: 6rem auto 3rem auto;
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.02), 0 3px 10px 0 rgba(0, 0, 0, 0.02);
+
+${media.medium`
+  width: 90%;
+  margin-top: 3rem;
+`}
+`;
