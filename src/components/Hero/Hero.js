@@ -12,38 +12,23 @@ const Hero = () => {
   const [bigText, setBigText] = useState('');
   const [smallText, setSmallText] = useState('');
 
-  //   const setBackgroundImage = () => {
-  //     switch (location.pathname) {
-  //       case '/':
-  //         return homeImage;
-  //       case '/get-involved':
-  //         return getInvolvedImage;
-  //       case '/our-work':
-  //         return workImage;
-  //       case '/our-mission':
-  //         return missionImage;
-  //       default:
-  //         return homeImage;
-  //     }
-  //   };
-
   const setHeroText = () => {
-    if (location.pathname === '/') {
+    if (location.pathname === '/home') {
       setBigText('You Are Not Alone');
       setSmallText('We are with you every step');
       return homeImage;
     }
-    if (location.pathname === '/get-involved') {
+    if (location.pathname === '/home/get-involved') {
       setBigText('Get Involved');
       setSmallText('You can be part of the change');
       return getInvolvedImage;
     }
-    if (location.pathname === '/our-work') {
+    if (location.pathname === '/home/our-work') {
       setBigText('Our Work');
       setSmallText('We are with you through every step');
       return workImage;
     }
-    if (location.pathname === '/our-mission') {
+    if (location.pathname === '/home/our-mission') {
       setBigText('Our Mission');
       setSmallText('Make the world a better place through education');
       return missionImage;
@@ -52,7 +37,6 @@ const Hero = () => {
 
   return (
     <>
-      {/* <MainWrapper wallImage={setBackgroundImage}> */}
       <MainWrapper wallImage={setHeroText}>
         <Header />
         <ContentWrapper>
@@ -60,7 +44,7 @@ const Hero = () => {
           <h5>{smallText}</h5>
         </ContentWrapper>
       </MainWrapper>
-      <div className='container'>
+      <div className="container">
         <Outlet />
       </div>
     </>

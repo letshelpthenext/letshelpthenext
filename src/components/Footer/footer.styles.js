@@ -21,12 +21,6 @@ padding: 0;
 }
 `;
 
-export const PhoneNumberWrapper = styled.p`
-> a {
-  text-decoration: none;
-}
-`;
-
 export const MySignWrapper = styled.p`
 /* color: rgb(185, 185, 185); */
 font-weight: lighter;
