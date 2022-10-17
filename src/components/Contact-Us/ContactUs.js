@@ -39,7 +39,7 @@ const ContactUs = () => {
         )
         .then(
           (result) => {
-            setMessage('Submitted successfully');
+            setMessage('Message sent successfully');
             setMessageVariant('success');
             // console.log('Emailjs text: ',result.text);
           },
@@ -49,6 +49,12 @@ const ContactUs = () => {
             // console.log('Emailjs error: ', error.text);
           }
         );
+
+        // CLEAR INPUT FIELDS AFTER SENDING EMAIL
+        setFullName('');
+        setEmailAddress('');
+        setSubject('');
+        setEmailMessage('');
     }
   };
   return (
