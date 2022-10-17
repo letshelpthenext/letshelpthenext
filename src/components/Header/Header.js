@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-opacity-10 sticky-top">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/home">
             <LogoImageWrapper
               src={Logo}
               className="d-inline-block align-top"
@@ -27,13 +27,13 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto">
-              <NavLink className="nav-item nav-link" to="/get-involved">
+              <NavLink className="nav-item nav-link" to="/home/get-involved">
                 Get Involved
               </NavLink>
-              <NavLink className="nav-item nav-link" to="/our-work">
+              <NavLink className="nav-item nav-link" to="/home/our-work">
                 Our Work
               </NavLink>
-              <NavLink className="nav-item nav-link" to="/our-mission">
+              <NavLink className="nav-item nav-link" to="/home/our-mission">
                 Our Mission
               </NavLink>
             </div>
