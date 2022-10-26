@@ -3,7 +3,7 @@ import { MenuWrapper, MySignWrapper, FooterWrapper } from './footer.styles'
 
 const Footer = () => {
     return (
-      <FooterWrapper className="bg-success">
+      <FooterWrapper>
         <MenuWrapper>
           <NavLink className='nav-item' to="/home">Home</NavLink>
           <NavLink className='nav-item' to="/home/get-involved">Get Involved</NavLink>
