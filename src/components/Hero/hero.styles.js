@@ -4,7 +4,7 @@ import media from '../../utilities/media';
 export const MainWrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-    url(${(props) => (media.smal ? props.phoneImage : props.wallImage)}) center no-repeat;
+    url(${props => media.small <= 700 ? props.phoneImage : props.wallImage}) center no-repeat;
 
   background-attachment: fixed;
   background-position: center;
