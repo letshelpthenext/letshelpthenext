@@ -6,14 +6,6 @@ padding-top: 20px;
   min-height: 80vh;
 `;
 
-// export const InnerWrapper = styled.div`
-//   min-height: 80vh;
-// `;
-
-export const TestimoniesWrapper = styled.div`
-  /* display: flex; */
-`;
-
 export const ApplyVisaWrapper = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;

@@ -30,7 +30,7 @@ const Hero = () => {
     }
     if (location.pathname === '/home/our-mission') {
       setBigText('Our Mission');
-      setSmallText('Make the world a better place through education');
+      setSmallText('Better world through education');
       return missionImage;
     }
   };
@@ -40,8 +40,8 @@ const Hero = () => {
       <MainWrapper wallImage={setHeroText}>
         <Header />
         <ContentWrapper>
-          <h1>{bigText}</h1>
-          <h5>{smallText}</h5>
+          <h1 className='animate__animated animate__fadeInLeftBig'>{bigText}</h1>
+          <h5 className='animate__animated animate__fadeInRightBig'>{smallText}</h5>
         </ContentWrapper>
       </MainWrapper>
       <div className="container">

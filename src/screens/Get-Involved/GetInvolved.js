@@ -1,51 +1,63 @@
-import { MainWrapper } from './getInvolved.styles';
+import { MainWrapper, TeamMembersWrapper } from './getInvolved.styles';
+import TeamMember from '../../components/Team-Member/TeamMember';
+import mishma from '../../assets/mishma.png';
+import kwaku from '../../assets/logo512.png'
 
 const GetInvolved = () => {
+  const mishmaBio = `The purpose of this nonprofit organization is to support international students 
+  financially. Throughout my college experience, I have met incredible people who have shown me kindness, 
+  love, and emotional, and cognitive support. Their counsel still guides me through this day. 
+  We believe in paying it forward, to whoever the opportunity is presented because life can be difficult 
+  for international students away from home for too long and facing up financial difficulties over time. 
+  This organization exists to provide breathing room to those who need financial assistance.`;
+
+  const kwakuBio = `Rodney Erickson is a content marketing professional at HubSpot, a CRM platform 
+  that helps companies attract visitors, convert leads, and close customers. Previously, Rodney worked 
+  as a marketing manager for a tech software startup. He graduated with honors from Columbia University 
+  with a dual degree in Business Administration and Creative Writing.`;
+
   return (
     <MainWrapper className="container pb-4">
+      <br />
       <h4>Donate</h4>
       <p>
-        Aenean convallis fermentum erat vitae volutpat. Vestibulum ut feugiat
-        turpis. Fusce pharetra pellentesque sem accumsan consequat. Nunc in
-        augue eros. Aenean et congue dui. Aliquam erat volutpat. Sed odio eros,
-        dictum eu nisi at, ornare ultrices arcu. Suspendisse potenti. Phasellus
-        vehicula, dui sit amet faucibus tincidunt, dui arcu luctus sapien, non
-        pharetra mauris turpis sit amet tortor. Pellentesque habitant morbi
-        tristique senectus et netus et malesuada fames ac turpis egestas.
+        Money is not the only commodity that is fun to give. We can give time,
+        we can give our expertise, we can give our love, or simply give a smile.
+        What does that cost? The point is, none of us can ever run out of
+        something worthwhile to give.
+        <br />
+        <strong>Click the button below to donate.</strong>
       </p>
       <button className="btn btn-success">Donate</button>
 
-      <h4 className='mt-4'>Volunteer</h4>
+      <h4 className="mt-4">Volunteer</h4>
       <p>
-        Praesent quis neque lectus. Quisque orci mauris, eleifend vel rutrum ac,
-        tempor quis metus. In at nulla molestie, accumsan ante eget, fermentum
-        odio. Curabitur vestibulum eleifend maximus. Praesent tristique, erat id
-        aliquet tincidunt, sapien neque maximus ipsum, vestibulum convallis nisi
-        risus ac sem. Duis sollicitudin dignissim libero, at sollicitudin neque
-        auctor a. Curabitur at cursus nunc, id vestibulum quam. Etiam ut odio
-        ornare, accumsan lacus ut, hendrerit mauris. Morbi dapibus, elit id
-        posuere faucibus, velit diam aliquet odio, sit amet malesuada arcu risus
-        blandit elit. Aenean eget sagittis justo, eu euismod urna. Etiam cursus
-        in lorem sit amet porta. Sed eget mattis ligula, volutpat maximus eros.
-        Pellentesque lacus lacus, mollis vitae tempus vel, posuere et orci. In
-        arcu turpis, efficitur vel maximus vitae, auctor in nisi. Phasellus
-        porttitor nulla maximus lorem malesuada pellentesque.
+        Our objective is to finance education because “Education is the most
+        powerful weapon which you can use to change the world.” Said Nelson
+        Mandela.
+        <br />
+        <br />
+        <strong>Ways You can help:</strong>
+        <br />
+        Be a host family, and provide an international student with a home for a
+        few months. Donate books, computers, coats, etc
       </p>
-      <p>
-        Praesent quis neque lectus. Quisque orci mauris, eleifend vel rutrum ac,
-        tempor quis metus. In at nulla molestie, accumsan ante eget, fermentum
-        odio. Curabitur vestibulum eleifend maximus. Praesent tristique, erat id
-        aliquet tincidunt, sapien neque maximus ipsum, vestibulum convallis nisi
-        risus ac sem. Duis sollicitudin dignissim libero, at sollicitudin neque
-        auctor a. Curabitur at cursus nunc, id vestibulum quam. Etiam ut odio
-        ornare, accumsan lacus ut, hendrerit mauris. Morbi dapibus, elit id
-        posuere faucibus, velit diam aliquet odio, sit amet malesuada arcu risus
-        blandit elit. Aenean eget sagittis justo, eu euismod urna. Etiam cursus
-        in lorem sit amet porta. Sed eget mattis ligula, volutpat maximus eros.
-        Pellentesque lacus lacus, mollis vitae tempus vel, posuere et orci. In
-        arcu turpis, efficitur vel maximus vitae, auctor in nisi. Phasellus
-        porttitor nulla maximus lorem malesuada pellentesque.
-      </p>
+      <hr />
+
+      <h2>Our Team</h2>
+      <TeamMembersWrapper>
+        <TeamMember
+          memberImage={mishma}
+          memberName="Mishma Buisson, Founder"
+          memberBio={mishmaBio}
+        />
+        <hr />
+        <TeamMember
+          memberImage={kwaku}
+          memberName="Kwaku Nkansah, Executive"
+          memberBio={kwakuBio}
+        />
+      </TeamMembersWrapper>
     </MainWrapper>
   );
 };

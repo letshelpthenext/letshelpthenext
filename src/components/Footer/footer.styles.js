@@ -10,6 +10,7 @@ padding: 20px;
 margin-top: -16px;
 text-align: center;
 /* color: white; */
+background-color: #AEE1F4;
 `;
 
 export const MenuWrapper = styled.p`
