@@ -10,6 +10,7 @@
 /coverage
 
 # production
+# include build folder for cyclic
 # /build
 
 # misc
