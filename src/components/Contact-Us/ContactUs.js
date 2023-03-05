@@ -44,6 +44,7 @@ const ContactUs = () => {
             // console.log('Emailjs text: ',result.text);
           },
           (error) => {
+            console.log(error);
             setMessage('There was a problem. Please try again');
             setMessageVariant('danger');
             // console.log('Emailjs error: ', error.text);
