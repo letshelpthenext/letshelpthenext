@@ -10,7 +10,8 @@
 /coverage
 
 # production
-/build
+# include build folder for cyclic
+# /build
 
 # misc
 .DS_Store
