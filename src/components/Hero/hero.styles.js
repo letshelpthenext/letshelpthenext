@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import media from '../../utilities/media';
+import { useWindowWide as windowWidth } from '../../utilities/windowWidthDetector';
 
 export const MainWrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-    url(${props => media.small <= 700 ? props.phoneImage : props.wallImage}) center no-repeat;
+    url(${props => windowWidth() > 700 ? props.wallImage : props.phoneImage}) center no-repeat;
 
   background-attachment: fixed;
   background-position: center;
