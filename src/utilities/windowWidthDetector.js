@@ -5,10 +5,10 @@ function getWindowSize() {
   return { innerWidth, innerHeight };
 }
 
-function getWindowSizeD() {
-  const { clientWidth, clientHeight } = document.documentElement;
-  return { clientWidth, clientHeight };
-}
+// function getWindowSizeD() {
+//   const { clientWidth, clientHeight } = document.documentElement;
+//   return { clientWidth, clientHeight };
+// }
 
 export const useWindowWide = () => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
