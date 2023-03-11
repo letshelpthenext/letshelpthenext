@@ -1,7 +1,7 @@
 import { MainWrapper, TeamMembersWrapper } from './getInvolved.styles';
 import TeamMember from '../../components/Team-Member/TeamMember';
 import mishma from '../../assets/mishma.png';
-import kwaku from '../../assets/logo512.png'
+import kwaku from '../../assets/logo512.png';
 
 const GetInvolved = () => {
   const mishmaBio = `The purpose of this nonprofit organization is to support international students 
@@ -11,13 +11,14 @@ const GetInvolved = () => {
   for international students away from home for too long and facing up financial difficulties over time. 
   This organization exists to provide breathing room to those who need financial assistance.`;
 
-  const kwakuBio = `Rodney Erickson is a content marketing professional at HubSpot, a CRM platform 
-  that helps companies attract visitors, convert leads, and close customers. Previously, Rodney worked 
-  as a marketing manager for a tech software startup. He graduated with honors from Columbia University 
-  with a dual degree in Business Administration and Creative Writing.`;
+  const kwakuBio = `We love serving people, especially in this space where every day we have the opportunity 
+  to help those in need, solve complex problems, and make a positive impact in the world. As a firm believer 
+  in the power of humanity and kindness, we are committed to using our skills and experience to create meaningful 
+  change and make the world a better place for all. We know we have limitations and cannot do it all. So, we 
+  welcome all the assistance we can get to continue making positive changes in the lives of many.`;
 
   return (
-    <MainWrapper className="container pb-4">
+    <MainWrapper className='container pb-4'>
       <br />
       <h4>Donate</h4>
       <p>
@@ -28,9 +29,9 @@ const GetInvolved = () => {
         <br />
         <strong>Click the button below to donate.</strong>
       </p>
-      <button className="btn btn-success">Donate</button>
+      <button className='btn btn-success'>Donate</button>
 
-      <h4 className="mt-4">Volunteer</h4>
+      <h4 className='mt-4'>Volunteer</h4>
       <p>
         Our objective is to finance education because “Education is the most
         powerful weapon which you can use to change the world.” Said Nelson
@@ -48,13 +49,15 @@ const GetInvolved = () => {
       <TeamMembersWrapper>
         <TeamMember
           memberImage={mishma}
-          memberName="Mishma Buisson, Founder"
+          memberName='Mishma Buisson'
+          memberDesignation='Founder'
           memberBio={mishmaBio}
         />
         <hr />
         <TeamMember
           memberImage={kwaku}
-          memberName="Kwaku Nkansah, Executive"
+          memberName='Kwaku Nkansah'
+          memberDesignation='Executive'
           memberBio={kwakuBio}
         />
       </TeamMembersWrapper>

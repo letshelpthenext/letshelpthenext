@@ -5,6 +5,11 @@ function getWindowSize() {
   return { innerWidth, innerHeight };
 }
 
+function getWindowSizeD() {
+  const { clientWidth, clientHeight } = document.documentElement;
+  return { clientWidth, clientHeight };
+}
+
 export const useWindowWide = () => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -19,6 +24,9 @@ export const useWindowWide = () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
+
+  console.log('#####################', document.documentElement.clientWidth)
+  console.log('##################### WINDOW', windowSize.innerWidth)
 
   return windowSize.innerWidth;
 };

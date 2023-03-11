@@ -1,23 +1,43 @@
-import { NavLink } from "react-router-dom";
-import { MenuWrapper, MySignWrapper, FooterWrapper } from './footer.styles'
+import {
+  MenuWrapper,
+  MySignWrapper,
+  FooterWrapper,
+  LinkWrapper,
+  EmailWrapper,
+} from './footer.styles';
 
 const Footer = () => {
-    return (
-      <FooterWrapper>
-        <MenuWrapper>
-          <NavLink className='nav-item' to="/home">Home</NavLink>
-          <NavLink className='nav-item' to="/home/get-involved">Get Involved</NavLink>
-          <NavLink className='nav-item' to="/home/our-work">Our Work</NavLink>
-          <NavLink className='nav-item' to="/home/our-mission">Our Mission</NavLink>
-          {/* <a className='nav-item' target="_blank" rel="noreferrer" href="mailto:email@example.com">
-            Email
-          </a> */}
-        </MenuWrapper>
-  
-        <MySignWrapper>HELP THE NEXT (HTN) &copy; 2022 | Developed by Kwaku Appau-Nkansah</MySignWrapper>
-      </FooterWrapper>
-    );
-  };
-  
+  return (
+    <FooterWrapper>
+      <MenuWrapper>
+        <LinkWrapper className='nav-item' to='/home'>
+          Home
+        </LinkWrapper>
+        <LinkWrapper className='nav-item' to='/home/get-involved'>
+          Get Involved
+        </LinkWrapper>
+        <LinkWrapper className='nav-item' to='/home/our-work'>
+          Our Work
+        </LinkWrapper>
+        <LinkWrapper className='nav-item' to='/home/our-mission'>
+          Our Mission
+        </LinkWrapper>
+        <EmailWrapper
+          className='nav-item'
+          target='_blank'
+          rel='noreferrer'
+          href='mailto:letshelpthenext@gmail.com'
+        >
+          Email Us
+        </EmailWrapper>
+      </MenuWrapper>
 
-export default Footer
+      <MySignWrapper>
+        LET'S HELP THE NEXT (LHTN) &copy; 2022 | Developed by Kwaku
+        Appau-Nkansah
+      </MySignWrapper>
+    </FooterWrapper>
+  );
+};
+
+export default Footer;
