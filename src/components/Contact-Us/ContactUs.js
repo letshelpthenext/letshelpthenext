@@ -18,6 +18,7 @@ const ContactUs = () => {
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
   const [messageVariant, setMessageVariant] = useState('danger');
+  const [messageLoading, setMessageLoading] = useState(false);
 
   const handleFullName = (fullName) => setFullName(fullName);
   const handleEmailAddress = (emailAddress) => setEmailAddress(emailAddress);
@@ -29,6 +30,7 @@ const ContactUs = () => {
     if ((fullName || emailAddress || emailMessage) === '') {
       setMessage('Please fill in all the required fields');
     } else {
+      setMessageLoading(true);
       // SEND EMAIL HERE
       emailjs
         .sendForm(
@@ -56,6 +58,7 @@ const ContactUs = () => {
         setEmailAddress('');
         setSubject('');
         setEmailMessage('');
+        setMessageLoading(false);
     }
   };
   return (
@@ -132,7 +135,7 @@ const ContactUs = () => {
 
               <div className="text-right">
                 <button type="submit" className="btn btn-info my-3">
-                  Submit
+                  { messageLoading ? 'Sending...' : 'Submit' }
                 </button>
               </div>
             </form>

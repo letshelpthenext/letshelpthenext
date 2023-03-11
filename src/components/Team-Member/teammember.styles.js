@@ -25,6 +25,16 @@ export const ImageWrapper = styled.div`
             border-radius: 0%;
         `}
     }
+
+    > div:nth-child(2) {
+        font-weight: bold;
+    }
+
+    > div:nth-child(3) {
+        font-size: .79rem;
+        font-weight: normal;
+        padding-left: 2rem;
+    }
 `;
 
 export const TextWrapper = styled.div`
