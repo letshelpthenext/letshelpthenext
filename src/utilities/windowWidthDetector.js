@@ -25,8 +25,8 @@ export const useWindowWide = () => {
     };
   }, []);
 
-  console.log('#####################', document.documentElement.clientWidth)
-  console.log('##################### WINDOW', windowSize.innerWidth)
+  // console.log('#####################', document.documentElement.clientWidth)
+  // console.log('##################### WINDOW', windowSize.innerWidth)
 
   return windowSize.innerWidth;
 };

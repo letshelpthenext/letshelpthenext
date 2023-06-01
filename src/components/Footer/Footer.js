@@ -30,6 +30,7 @@ const Footer = () => {
         >
           Email Us
         </EmailWrapper>
+        <a className="nav-item" target="_blank" href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" rel="noreferrer">Donate</a>
       </MenuWrapper>
 
       <MySignWrapper>

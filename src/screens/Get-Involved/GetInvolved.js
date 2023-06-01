@@ -29,7 +29,7 @@ const GetInvolved = () => {
         <br />
         <strong>Click the button below to donate.</strong>
       </p>
-      <button className='btn btn-success'>Donate</button>
+      <a href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" target='_blank' className='btn btn-success' rel="noreferrer">Donate</a>
 
       <h4 className='mt-4'>Volunteer</h4>
       <p>
