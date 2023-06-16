@@ -44,9 +44,7 @@ const OurWork = () => {
       <p>
         Our Mentorship program does not provide sponsorship; however, we are
         present with the applicant for every application, every decision, and
-        every phone call as we advocate on their behalf. We care so much that it
-        is difficult sometimes to make objective decisions as we want them to
-        take full advantage of this opportunity life has offered. We serve by
+        every phone call as we advocate on their behalf. We serve by
         providing love and support. We look for host families, and we provide
         financial assistance for tuition and student life expenses to the most
         in need.
