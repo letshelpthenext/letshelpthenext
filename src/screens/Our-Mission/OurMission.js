@@ -4,7 +4,7 @@ import Testimony from '../../components/Testimony/Testimony';
 const OurMission = () => {
   return (
     <MainWrapper className="container">
-      <h4>Our Vission</h4>
+      <h4>Our Vision</h4>
       <p>
         We aim to support education by mentoring, providing aid, and inspiring
         those who have received help to pay it forward,

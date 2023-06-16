@@ -22,8 +22,8 @@ const GetInvolved = () => {
       <br />
       <h4>Donate</h4>
       <p>
-        Money is not the only commodity that is fun to give. We can give time,
-        we can give our expertise, we can give our love, or simply give a smile.
+        Money is not the only commodity that is fun to give. You can give your time,
+        your expertise, your love, or simply give a smile.
         What does that cost? The point is, none of us can ever run out of
         something worthwhile to give.
         <br />
@@ -38,10 +38,10 @@ const GetInvolved = () => {
         Mandela.
         <br />
         <br />
-        <strong>Ways You can help:</strong>
+        {/* <strong>Ways You can help:</strong>
         <br />
         Be a host family, and provide an international student with a home for a
-        few months. Donate books, computers, coats, etc
+        few months. Donate books, computers, coats, etc */}
       </p>
       <hr />
 

@@ -10,7 +10,7 @@ const OurStory = () => (
         International students, seeking opportunities that their home countries
         do not offer, often face dreadful financial crises and a lack of
         orientation at some point during their studies. Sometimes they even
-        missed one-time opportunities due to a lack of resources. Ongoing Help
+        miss on one-time opportunities due to a lack of resources. Let's Help The Next
         focuses on providing mentorship on orientation, self-reliance, and
         financial aid to international students in the United States. Making
         their dream a reality is our way of paying it forward every chance we
