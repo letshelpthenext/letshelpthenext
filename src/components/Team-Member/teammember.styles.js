@@ -4,11 +4,15 @@ import media from '../../utilities/media';
 export const MainWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 3fr;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
 
     ${media.small`
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     `}
 `;
 
