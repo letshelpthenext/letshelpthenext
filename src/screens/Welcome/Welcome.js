@@ -64,14 +64,14 @@ const Welcome = () => {
             <div className='modal-body'>
               <p>
                 Join us for a special evening of music, purpose, laughter, and
-                giving! This is an event where you and your loved one can enjoy
+                giving on <b>1st December 2023</b> from <b>6:00PM - 7:30PM (MST)</b> at <b>3900 N Adobe Way, Lehi, UT</b>! This is an event where you and your loved one can enjoy
                 a delicious dinner, learn about a worthy cause, listened to a{' '}
                 <a
                   href='https://linktr.ee/brakwaku'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  wonderful artist
+                  <b>wonderful artist</b>
                 </a>
                 , and participate in a fun fundraising activity.
                 <br />
@@ -82,7 +82,7 @@ const Welcome = () => {
                   rel='noreferrer'
                   onClick={buyTicket}
                 >
-                  ticket here
+                  <b>ticket here</b>
                 </a>
                 . All proceeds will go towards the cause of our foundation to
                 make the work a better place.
