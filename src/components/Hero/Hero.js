@@ -74,7 +74,7 @@ const Hero = () => {
             {smallText}
           </h5>
           {/* Remove this after fundraising event */}
-          <a className="nav-item text-white nav-link bg-danger rounded mt-2 p-2" target="_blank" href="https://www.zeffy.com/en-US/ticketing/a1bc7dba-57fc-408b-9ca9-9600228b2146" rel="noreferrer">BUY TICKET</a>
+          <a className="nav-item text-white nav-link bg-danger rounded mt-2 p-2" target="_blank" href="https://www.zeffy.com/en-US/ticketing/a1bc7dba-57fc-408b-9ca9-9600228b2146" rel="noreferrer">DATE NIGHT WITH A PURPOSE</a>
         </ContentWrapper>
       </MainWrapper>
       <div className="container">

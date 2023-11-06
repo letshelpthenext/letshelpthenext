@@ -31,7 +31,14 @@ export const CustomDiv = styled.div`
   }
 
   ${media.small`
-    font-size: 4rem;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 1rem;
+    height: 33.3333333vh;
+
+    > div {
+      font-size: 4rem;
+    }
   `}
 
   /* Color overlay */
