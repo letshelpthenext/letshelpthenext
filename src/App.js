@@ -5,6 +5,7 @@ import HomeScreen from './screens/Home/Home';
 import GetInvolvedScreen from './screens/Get-Involved/GetInvolved';
 import OurWorkScreen from './screens/Our-Work/OurWork';
 import OurMissionScreen from './screens/Our-Mission/OurMission';
+import EventsScreen from './screens/Events/Events';
 import NotFoundScreen from './screens/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Welcome />} />
+        <Route path="events" element={<EventsScreen />} />
         <Route path="/home" element={<Hero />}>
           <Route index element={<HomeScreen />} />
           <Route path="get-involved" element={<GetInvolvedScreen />} />
@@ -25,6 +27,7 @@ function App() {
       { location.pathname === '/home/get-involved' && <Footer />}
       { location.pathname === '/home/our-work' && <Footer />}
       { location.pathname === '/home/our-mission' && <Footer />}
+      { location.pathname === '/events' && <Footer />}
       { location.pathname === '/home' && <Footer />}
     </>
   );
