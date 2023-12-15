@@ -56,17 +56,6 @@ export const CustomDiv = styled.div`
   }
 `;
 
-// Remove code below after the event
-export const BootStrapModal = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0
-`;
-
-// Remove code above after the event
-
 
 // export const CustomDiv = styled.div`
 //   background-color: ${(props) => props.divcolor};
