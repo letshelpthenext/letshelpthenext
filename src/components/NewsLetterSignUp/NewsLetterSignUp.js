@@ -61,6 +61,7 @@ const NewsLetterSignUp = () => {
         <div className='text-center'>Subscribe to our newsletter to receive the latest updates every week. No spam.</div>
         <br />
         <form ref={form} onSubmit={submitHandler}>
+            <input type='hidden' name='subject' value='Newsletter subscription' />
           <InputField
             name='user_name'
             value={fullName}
