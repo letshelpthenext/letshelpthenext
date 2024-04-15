@@ -9,6 +9,7 @@ import {
 import InputField from '../InputField';
 import { validators } from '../../utilities/Validator';
 import Message from '../Message';
+import NewsLetterSignUp from '../NewsLetterSignUp/NewsLetterSignUp';
 
 const ContactUs = () => {
   const form = useRef();
@@ -47,7 +48,7 @@ const ContactUs = () => {
           },
           (error) => {
             console.log(error);
-            setMessage('There was a problem. Please try again');
+            setMessage('Action unsuccessful. Please try again');
             setMessageVariant('danger');
             // console.log('Emailjs error: ', error.text);
           }
@@ -68,7 +69,7 @@ const ContactUs = () => {
       </CaptionBox>
       <ContentBox>
         <CardWrapper className="card">
-          <div className="card-header">Send Us A Message</div>
+          <div className="card-header text-center">SEND US A MESSAGE</div>
           <div className="card-body">
             {message && <Message variant={messageVariant}>{message}</Message>}
             <form ref={form} onSubmit={submitHandler}>
@@ -135,12 +136,13 @@ const ContactUs = () => {
 
               <div className="text-right">
                 <button type="submit" className="btn btn-info my-3">
-                  { messageLoading ? 'Sending...' : 'Submit' }
+                  { messageLoading ? 'Sending...' : 'Send' }
                 </button>
               </div>
             </form>
           </div>
         </CardWrapper>
+        <NewsLetterSignUp id='newsLetter' />
       </ContentBox>
     </MainWrapper>
   );
