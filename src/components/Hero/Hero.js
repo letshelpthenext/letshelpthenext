@@ -73,6 +73,7 @@ const Hero = () => {
           <h5 className="animate__animated animate__fadeInRightBig">
             {smallText}
           </h5>
+          {/* <a href='#newsLetter' className='btn btn-primary'>Newsletter</a> */}
         </ContentWrapper>
       </MainWrapper>
       <div className="container">

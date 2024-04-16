@@ -23,13 +23,15 @@ const InputField = ({
 
   return (
     <div>
-      <MainWrapper className="input-group form-group">
-        <span className="input-group-text bg-info">
-          <i className={fontAwesomeIcon}></i>
-        </span>
+      <MainWrapper className='input-group form-group'>
+        {fontAwesomeIcon && (
+          <span className='input-group-text bg-info'>
+            <i className={fontAwesomeIcon}></i>
+          </span>
+        )}
         {type === 'textarea' ? (
           <TextAreaWrapper
-            className="form-control"
+            className='form-control'
             placeholder={placeholder}
             type={type}
             name={name}
@@ -39,7 +41,7 @@ const InputField = ({
           />
         ) : (
           <InputWrapper
-            className="form-control"
+            className='form-control'
             placeholder={placeholder}
             type={type}
             name={name}
@@ -77,7 +79,7 @@ const MainWrapper = styled.div`
   > span {
     color: white;
   }
-  margin: 0 auto .5rem auto;
+  margin: 0 auto 0.5rem auto;
 `;
 
 const InputWrapper = styled.input`

@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import { LogoImageWrapper, MyNavWrapper } from './header.styles';
+import { Outlet, NavLink } from 'react-router-dom';
+import { LogoImageWrapper, MyNavWrapper } from './blogsHeader.styles';
 import Logo from '../../assets/whiteLogo.png';
 
 const Header = () => {
@@ -36,14 +36,17 @@ const Header = () => {
               <NavLink className="nav-item nav-link" to="/home/our-mission">
                 Our Mission
               </NavLink>
-              {/* <NavLink className="nav-item nav-link" to="/blogs">
+              <NavLink className="nav-item nav-link" to="/blogs">
                 Blog
-              </NavLink> */}
+              </NavLink>
               <a className="nav-item nav-link bg-danger rounded p-2" target="_blank" href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" rel="noreferrer">Donate</a>
             </div>
           </div>
         </div>
       </MyNavWrapper>
+      <div className="container">
+        <Outlet />
+      </div>
     </>
   );
 };

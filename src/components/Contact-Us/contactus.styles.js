@@ -31,6 +31,7 @@ export const ContentBox = styled.div`
   ${media.small`
     border-top: 0px;
     border-radius: 0px 0px 10px 10px;
+    flex-direction: column;
   `}
 `;
 
