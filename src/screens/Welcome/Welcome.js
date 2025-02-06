@@ -64,27 +64,16 @@ const Welcome = () => {
               community spirit at the Let's Help The Next Fundraiser! This
               fun-filled event combines the energy of Latin rhythms with the
               excitement of a live auction—all while supporting international
-              students in their educational journey. Whether you're an
-              experienced dancer or a beginner, you'll enjoy an inclusive Latin
-              dance session led by talented instructors, preceded by a thrilling
-              auction featuring unique paintings from international backgrounds.
-              It’s a perfect date night or an opportunity to gather with
-              friends, all while making a meaningful impact. By attending,
-              you're helping to fund scholarships, mentorship programs, and
-              resources for international students striving to achieve their
-              academic dreams. Together, we can make a world of difference and
-              empower the next generation of global leaders. So, grab your
-              dancing shoes, bring your bidding spirit, and let’s dance, bid,
-              and celebrate for a great cause! We can't wait to see you there!
-              You can purchase your{' '}
-                <a
-                  href='https://www.zeffy.com/en-US/ticketing/lets-help-the-next-latin-dance-and-auction-date-night-fundraiser'
-                  target='_blank'
-                  rel='noreferrer'
-                  onClick={buyTicket}
-                >
-                  <b>ticket here.</b>
-                </a>
+              students in their educational journey. We can't wait to see you
+              there! You can purchase your{' '}
+              <a
+                href="https://www.zeffy.com/en-US/ticketing/lets-help-the-next-latin-dance-and-auction-date-night-fundraiser"
+                target="_blank"
+                rel="noreferrer"
+                onClick={buyTicket}
+              >
+                <b>ticket here.</b>
+              </a>
               {/* <p>
                 Join us for a special evening of music, purpose, laughter, and
                 giving on <b>1st December 2023</b> from <b>6:00PM - 7:30PM (MST)</b> at <b>3900 N Adobe Way, Lehi, UT</b>! This is an event where you and your loved one can enjoy
