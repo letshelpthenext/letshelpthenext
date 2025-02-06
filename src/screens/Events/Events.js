@@ -1,7 +1,7 @@
 import { MainWrapper, PdfFrame  } from './events.styles';
 import Header from '../../components/Header/Header';
-import dinner from '../../assets/fundraiser.jpeg';
-
+import dinner from '../../assets/fundraiser.jpeg'; //TODO: change to the actual file
+ 
 const Events = () => {
   return (
     <MainWrapper>
