@@ -86,7 +86,7 @@ const GetInvolved = () => {
         />
         <TeamMember
           memberImage={michel}
-          memberName='Michel'
+          memberName='Michel Bergeron'
           memberDesignation='Executive'
           memberBio={michelBio}
         />
