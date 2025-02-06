@@ -7,7 +7,7 @@ const Events = () => {
     <MainWrapper>
       <Header />
       <center>
-      <PdfFrame src={`${dinner}#toolbar=0`} title='Dinner Event'></PdfFrame>
+      <PdfFrame src={`${dinner}#toolbar=0`} title='Fundraiser Event'></PdfFrame>
       </center>
     </MainWrapper>
   );
