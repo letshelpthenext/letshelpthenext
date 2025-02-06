@@ -6,6 +6,14 @@ padding-top: 20px;
   min-height: 80vh;
 `;
 
+export const BYUIWrapper = styled.div`
+  margin-bottom: 60px;
+
+  > h4:nth-child(1) {
+    padding-bottom: 10px;
+  }
+`;
+
 export const ApplyVisaWrapper = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
