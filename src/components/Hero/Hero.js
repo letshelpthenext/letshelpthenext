@@ -74,6 +74,8 @@ const Hero = () => {
             {smallText}
           </h5>
           {/* <a href='#newsLetter' className='btn btn-primary'>Newsletter</a> */}
+          {/* Remove this after fundraising event */}
+          <a className="nav-item text-white nav-link bg-danger rounded mt-2 p-2" target="_blank" href="https://www.zeffy.com/en-US/ticketing/lets-help-the-next-latin-dance-and-auction-date-night-fundraiser" rel="noreferrer">BUY EVENT TICKET</a>
         </ContentWrapper>
       </MainWrapper>
       <div className="container">

@@ -39,7 +39,11 @@ const Header = () => {
               {/* <NavLink className="nav-item nav-link" to="/blogs">
                 Blog
               </NavLink> */}
+               <NavLink className="nav-item nav-link" to="/events">
+                Flyer
+              </NavLink>
               <a className="nav-item nav-link bg-danger rounded p-2" target="_blank" href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" rel="noreferrer">Donate</a>
+              <a className="nav-item nav-link bg-danger rounded mt-2 p-2" target="_blank" href="https://www.zeffy.com/en-US/ticketing/lets-help-the-next-latin-dance-and-auction-date-night-fundraiser" rel="noreferrer">BUY EVENT TICKET</a>
             </div>
           </div>
         </div>
