@@ -1,34 +1,37 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { CustomDiv, BootStrapModal } from './welcome.styles';
+import { 
+  CustomDiv, 
+  // BootStrapModal
+} from './welcome.styles';
 import loveImage from '../../assets/home.jpg';
 import supportImage from '../../assets/support.jpeg';
 import liftImage from '../../assets/getinvolved.jpg';
 
 const Welcome = () => {
   // Remove code below after the event
-  const buyTicket = () => {
-    const button = document.querySelector('#closeModal');
-    if (button) {
-      button.click();
-    }
-    window.open(
-      'https://www.zeffy.com/en-US/ticketing/lets-help-the-next-latin-dance-and-auction-date-night-fundraiser',
-      '_blank'
-    );
-  };
-  useEffect(() => {
-    const button = document.querySelector('#showModal');
-    if (button) {
-      button.click();
-    }
-  }, []);
+  // const buyTicket = () => {
+  //   const button = document.querySelector('#closeModal');
+  //   if (button) {
+  //     button.click();
+  //   }
+  //   window.open(
+  //     'https://www.zeffy.com/en-US/ticketing/lets-help-the-next-latin-dance-and-auction-date-night-fundraiser',
+  //     '_blank'
+  //   );
+  // };
+  // useEffect(() => {
+  //   const button = document.querySelector('#showModal');
+  //   if (button) {
+  //     button.click();
+  //   }
+  // }, []);
   // Remove code above after the event
 
   return (
     <>
       {/* Remove code below after the event */}
-      <button
+      {/* <button
         hidden
         id="showModal"
         type="button"
@@ -74,30 +77,6 @@ const Welcome = () => {
               >
                 <b>ticket here.</b>
               </a>
-              {/* <p>
-                Join us for a special evening of music, purpose, laughter, and
-                giving on <b>1st December 2023</b> from <b>6:00PM - 7:30PM (MST)</b> at <b>3900 N Adobe Way, Lehi, UT</b>! This is an event where you and your loved one can enjoy
-                a delicious dinner, learn about a worthy cause, listen to a{' '}
-                <a
-                  href='https://linktr.ee/brakwaku'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <b>wonderful artist</b>
-                </a>
-                , and participate in a fundraising activity.
-                <br />
-                You can purchase your{' '}
-                <a
-                  href='https://www.zeffy.com/en-US/ticketing/a1bc7dba-57fc-408b-9ca9-9600228b2146'
-                  target='_blank'
-                  rel='noreferrer'
-                  onClick={buyTicket}
-                >
-                  <b>ticket here</b>
-                </a>
-                . All donations will go towards funding college education for our beneficiaries. Thank you for your support!
-              </p> */}
             </div>
             <div className="modal-footer">
               <button
@@ -117,7 +96,7 @@ const Welcome = () => {
             </div>
           </div>
         </div>
-      </BootStrapModal>
+      </BootStrapModal> */}
       {/* Remove code above after the event */}
 
       <NavLink style={{ textDecoration: 'none' }} to="/home">
