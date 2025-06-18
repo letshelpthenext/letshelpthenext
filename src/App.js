@@ -6,6 +6,7 @@ import HomeScreen from './screens/Home/Home';
 import GetInvolvedScreen from './screens/Get-Involved/GetInvolved';
 import OurWorkScreen from './screens/Our-Work/OurWork';
 import OurMissionScreen from './screens/Our-Mission/OurMission';
+import ContactUsScreen from './screens/Contact-Us/ContactUs';
 // import BlogsScreen from './screens/Blogs/Blogs';
 // import DNWPScreen from './components/Blogs/DNWP';
 import EventsScreen from './screens/Events/Events';
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="events" element={<EventsScreen />} />
+        <Route path="contact-us" element={<ContactUsScreen />} />
         {/* <Route path="/blogs" element={<BlogsHeader />} >
           <Route index element={<BlogsScreen />} />
           <Route path="dnwap" element={<DNWPScreen />} />

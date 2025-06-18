@@ -228,7 +228,7 @@ export const BackgroundDecoration = styled.div`
   background-image: radial-gradient(circle at 20% 20%, ${colors.primary} 1px, transparent 1px),
     radial-gradient(circle at 80% 80%, ${colors.secondary} 1px, transparent 1px);
   background-size: 50px 50px, 80px 80px;
-  z-index: 1;
+  /* z-index: 1; */
 `;
 
 
