@@ -49,7 +49,7 @@ const OurWork = () => {
             <HeroContent>
               <HeroTitle>Our Work</HeroTitle>
               <HeroSubtitle>
-                Empowering international students through comprehensive support, 
+                Empowering international students through comprehensive support,
                 scholarships, and mentorship programs
               </HeroSubtitle>
             </HeroContent>
@@ -124,7 +124,7 @@ const OurWork = () => {
           {/* Key Initiatives */}
           <InitiativesSection variants={itemVariants}>
             <SectionTitle>Key Initiatives</SectionTitle>
-            
+
             <InitiativesGrid>
               <InitiativeCard variants={itemVariants}>
                 <InitiativeIcon>🤝</InitiativeIcon>
@@ -188,14 +188,14 @@ const OurWork = () => {
           {/* Process Section */}
           <ProcessSection variants={itemVariants}>
             <SectionTitle>Your Journey to Success</SectionTitle>
-            
+
             <ProcessGrid>
               <ProcessStep variants={itemVariants}>
                 <StepNumber>1</StepNumber>
                 <StepContent>
                   <StepTitle>Research & Preparation</StepTitle>
                   <StepDescription>
-                    The difference between successfully going through the process of 
+                    The difference between successfully going through the process of
                     attending university in the United States is doing your own research.
                   </StepDescription>
                   <StepList>
@@ -214,14 +214,14 @@ const OurWork = () => {
                   <StepContent>
                     <StepTitle>Visa Application Process</StepTitle>
                     <StepDescription>
-                      After being accepted by a school, the next process is applying for a 
-                      student visa. Since qualifying for a student visa is a courtesy, giving 
+                      After being accepted by a school, the next process is applying for a
+                      student visa. Since qualifying for a student visa is a courtesy, giving
                       oneself the best shot may be the only hope.
                     </StepDescription>
                     <p>
-                      As a result of providing assistance to applicants in different countries, 
-                      we have learned that each region comes with its difficulties. The 
-                      social-political situation of your home country and your financial 
+                      As a result of providing assistance to applicants in different countries,
+                      we have learned that each region comes with its difficulties. The
+                      social-political situation of your home country and your financial
                       situation contribute to determining the probability of being granted a visa.
                     </p>
                   </StepContent>
@@ -698,7 +698,7 @@ const CTAButton = styled.a`
   ${props => props.secondary ? `
     background: transparent;
     color: ${colors.white};
-    
+
     &:hover {
       background: ${colors.white};
       color: ${colors.primary};
@@ -707,7 +707,7 @@ const CTAButton = styled.a`
   ` : `
     background: ${colors.white};
     color: ${colors.primary};
-    
+
     &:hover {
       background: transparent;
       color: ${colors.white};

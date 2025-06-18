@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Header from '../Header/Header';
-import { colors, spacing, typography, breakpoints, borderRadius } from '../../styles/tokens';
+import { colors, spacing, typography, breakpoints, shadows, borderRadius } from '../../styles/tokens';
 import homeImage from '../../assets/home.jpg';
 import getInvolvedImage from '../../assets/getinvolved.jpg';
 import missionImage from '../../assets/mission.jpg';
@@ -14,7 +14,7 @@ import missionphone from '../../assets/missionphone.jpg';
 import workphone from '../../assets/workphone.jpg';
 import logo from '../../assets/whiteLogo.png';
 
-const Hero = () => {
+const HeroSimple = () => {
   const location = useLocation();
   const [heroData, setHeroData] = useState({
     title: '',
@@ -32,10 +32,10 @@ const Hero = () => {
           return {
             title: 'You Are Not Alone',
             subtitle: 'We are with you every step of your educational journey',
-            description: 'Supporting international students achieve their dreams through mentorship and comprehensive guidance.',
+            description: 'Supporting international students achieve their dreams through mentorship, scholarships, and comprehensive guidance.',
             backgroundImage: homeImage,
             mobileImage: homephone,
-            badge: 'Empowering Students Since 2020'
+            badge: '🎓 Empowering Students Since 2020'
           };
         case '/home/get-involved':
         case '/get-involved':
@@ -45,7 +45,7 @@ const Hero = () => {
             description: 'Join our mission to make education accessible for international students around the world.',
             backgroundImage: getInvolvedImage,
             mobileImage: getInvolvedphone,
-            badge: 'Join Our Community'
+            badge: '🤝 Join Our Community'
           };
         case '/home/our-work':
         case '/our-work':
@@ -55,7 +55,7 @@ const Hero = () => {
             description: 'Discover how we\'re transforming lives through comprehensive student support programs.',
             backgroundImage: workImage,
             mobileImage: workphone,
-            badge: 'Transforming Lives'
+            badge: '📚 Transforming Lives'
           };
         case '/home/our-mission':
         case '/our-mission':
@@ -65,7 +65,7 @@ const Hero = () => {
             description: 'Learn about our commitment to supporting vibrant individuals achieve their educational dreams.',
             backgroundImage: missionImage,
             mobileImage: missionphone,
-            badge: 'Our Purpose'
+            badge: '🌟 Our Purpose'
           };
         default:
           return {
@@ -74,7 +74,7 @@ const Hero = () => {
             description: 'Empowering dreams through education, mentorship, and community support.',
             backgroundImage: homeImage,
             mobileImage: homephone,
-            badge: 'Making Dreams Reality'
+            badge: '🎯 Making Dreams Reality'
           };
       }
     };
@@ -95,9 +95,9 @@ const Hero = () => {
 
         <HeroContent>
           <LogoContainer
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <HeroLogo src={logo} alt="Let's Help The Next" />
           </LogoContainer>
@@ -137,23 +137,50 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Make a donation to support international students"
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.98 }}
                 >
+                  <ButtonIcon>💖</ButtonIcon>
                   Donate Now
                 </PrimaryButton>
                 <SecondaryButton
                   href="/get-involved"
                   aria-label="Learn more about volunteering opportunities"
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.98 }}
                 >
+                  <ButtonIcon>🤝</ButtonIcon>
                   Get Involved
                 </SecondaryButton>
               </HeroActions>
             )}
+
+            <QuickStats variants={itemVariants}>
+              <StatItem>
+                <StatNumber>20+</StatNumber>
+                <StatLabel>Students Helped</StatLabel>
+              </StatItem>
+              <StatItem>
+                <StatNumber>$8,985</StatNumber>
+                <StatLabel>Donated in 2024</StatLabel>
+              </StatItem>
+              <StatItem>
+                <StatNumber>100%</StatNumber>
+                <StatLabel>Success Rate</StatLabel>
+              </StatItem>
+            </QuickStats>
           </HeroTextContainer>
         </HeroContent>
+
+        <ScrollIndicator
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 1.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            repeatDelay: 1
+          }}
+        >
+          ↓
+        </ScrollIndicator>
       </HeroContainer>
 
       <MainContent>
@@ -176,6 +203,7 @@ const HeroContainer = styled.div`
   background-position: center;
   background-attachment: fixed;
   color: ${colors.white};
+  overflow: hidden;
 
   @media (max-width: ${breakpoints.md}) {
     background-image: ${props => `url(${props.mobileImage})`};
@@ -191,7 +219,7 @@ const BackgroundOverlay = styled.div`
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(31, 155, 207, 0.75) 0%,
+    rgba(31, 155, 207, 0.8) 0%,
     rgba(26, 123, 160, 0.85) 50%,
     rgba(21, 94, 117, 0.9) 100%
   );
@@ -206,7 +234,7 @@ const HeroContent = styled.div`
   justify-content: center;
   text-align: center;
   padding: ${spacing[8]} ${spacing[4]};
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -218,7 +246,7 @@ const HeroContent = styled.div`
 
 const LogoContainer = styled(motion.div)`
   margin-bottom: ${spacing[6]};
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 
   @media (max-width: ${breakpoints.md}) {
     margin-bottom: ${spacing[4]};
@@ -226,11 +254,11 @@ const LogoContainer = styled(motion.div)`
 `;
 
 const HeroLogo = styled.img`
-  height: 70px;
+  height: 80px;
   width: auto;
 
   @media (max-width: ${breakpoints.md}) {
-    height: 55px;
+    height: 60px;
   }
 `;
 
@@ -241,29 +269,29 @@ const HeroTextContainer = styled(motion.div)`
 const HeroBadge = styled(motion.div)`
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: ${borderRadius.full};
-  padding: ${spacing[2]} ${spacing[5]};
+  padding: ${spacing[2]} ${spacing[4]};
   font-size: ${typography.fontSize.sm};
   font-weight: ${typography.fontWeightMedium};
   margin-bottom: ${spacing[6]};
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: ${shadows.lg};
 
   @media (max-width: ${breakpoints.md}) {
     margin-bottom: ${spacing[4]};
     font-size: ${typography.fontSize.xs};
-    padding: ${spacing[2]} ${spacing[4]};
+    padding: ${spacing[1]} ${spacing[3]};
   }
 `;
 
 const HeroTitle = styled(motion.h1)`
   font-family: ${typography.fontSecondary};
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: ${typography.fontWeightBold};
   line-height: ${typography.lineHeight.tight};
-  margin-bottom: ${spacing[5]};
+  margin-bottom: ${spacing[6]};
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 
   @media (max-width: ${breakpoints.md}) {
@@ -272,7 +300,7 @@ const HeroTitle = styled(motion.h1)`
 `;
 
 const HeroSubtitle = styled(motion.p)`
-  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: ${typography.fontWeightMedium};
   line-height: ${typography.lineHeight.relaxed};
   margin-bottom: ${spacing[4]};
@@ -285,13 +313,13 @@ const HeroSubtitle = styled(motion.p)`
 `;
 
 const HeroDescription = styled(motion.p)`
-  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: ${typography.fontWeightNormal};
   line-height: ${typography.lineHeight.relaxed};
   margin-bottom: ${spacing[8]};
-  opacity: 0.88;
-  max-width: 550px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   @media (max-width: ${breakpoints.md}) {
     margin-bottom: ${spacing[6]};
@@ -303,15 +331,22 @@ const HeroActions = styled(motion.div)`
   gap: ${spacing[4]};
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: ${spacing[8]};
 
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
     align-items: center;
     gap: ${spacing[3]};
+    margin-bottom: ${spacing[6]};
   }
 `;
 
-const PrimaryButton = styled(motion.a)`
+const ButtonIcon = styled.span`
+  margin-right: ${spacing[2]};
+  font-size: 1.2em;
+`;
+
+const PrimaryButton = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -323,67 +358,127 @@ const PrimaryButton = styled(motion.a)`
   font-weight: ${typography.fontWeightSemiBold};
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   border: 2px solid transparent;
-  min-width: 180px;
+  min-width: 200px;
 
   &:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
     color: ${colors.white};
     text-decoration: none;
   }
 
   &:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline: 2px solid ${colors.white};
     outline-offset: 2px;
   }
 
   @media (max-width: ${breakpoints.sm}) {
-    min-width: 220px;
+    min-width: 250px;
   }
 `;
 
-const SecondaryButton = styled(motion.a)`
+const SecondaryButton = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   color: ${colors.white};
   padding: ${spacing[4]} ${spacing[8]};
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: ${borderRadius.full};
   font-size: ${typography.fontSize.lg};
   font-weight: ${typography.fontWeightSemiBold};
   text-decoration: none;
   transition: all 0.3s ease;
-  min-width: 180px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
     text-decoration: none;
   }
 
   &:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline: 2px solid ${colors.white};
     outline-offset: 2px;
   }
 
   @media (max-width: ${breakpoints.sm}) {
-    min-width: 220px;
+    min-width: 250px;
+  }
+`;
+
+const QuickStats = styled(motion.div)`
+  display: flex;
+  gap: ${spacing[6]};
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: ${breakpoints.sm}) {
+    gap: ${spacing[4]};
+  }
+`;
+
+const StatItem = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: ${borderRadius.lg};
+  padding: ${spacing[3]} ${spacing[4]};
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+
+  @media (max-width: ${breakpoints.sm}) {
+    min-width: 100px;
+    padding: ${spacing[2]} ${spacing[3]};
+  }
+`;
+
+const StatNumber = styled.div`
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: ${typography.fontWeightBold};
+  margin-bottom: ${spacing[1]};
+  color: ${colors.white};
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+`;
+
+const StatLabel = styled.div`
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: ${typography.fontWeightMedium};
+  color: ${colors.white};
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+`;
+
+const ScrollIndicator = styled(motion.div)`
+  position: absolute;
+  bottom: ${spacing[8]};
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: ${colors.white};
+  opacity: 0.7;
+  cursor: pointer;
+
+  @media (max-width: ${breakpoints.md}) {
+    bottom: ${spacing[6]};
   }
 `;
 
 const MainContent = styled.div`
   background: ${colors.white};
-  margin-top: -${spacing[6]};
+  margin-top: -${spacing[8]};
   border-radius: ${borderRadius['2xl']} ${borderRadius['2xl']} 0 0;
   position: relative;
   z-index: 5;
-  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: ${shadows.xl};
 `;
 
 // Animation variants
@@ -392,22 +487,22 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.15
+      delayChildren: 0.5,
+      staggerChildren: 0.2
     }
   }
 };
 
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 30, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.8,
       ease: "easeOut"
     }
   }
 };
 
-export default Hero;
+export default HeroSimple;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 import TeamMember from '../../components/TeamMember/TeamMember';
 import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
 

@@ -1,33 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
 
-const OurMission = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
+const OurMissionSimple = () => {
   const testimonials = [
     {
       id: 1,
@@ -61,229 +37,175 @@ const OurMission = () => {
       <Helmet>
         <title>Our Mission - Let's Help The Next</title>
         <meta name="description" content="Our mission is to support vibrant individuals with potential and the will to gain an education to create something extraordinary. Read inspiring testimonials from students we've helped." />
-        <meta property="og:title" content="Our Mission - Let's Help The Next" />
-        <meta property="og:description" content="Supporting international students achieve their educational dreams through mentorship, financial aid, and comprehensive support." />
       </Helmet>
 
-      <PageContainer
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <Container>
-          {/* Hero Section */}
-          <HeroSection variants={itemVariants}>
-            <HeroContent>
-              <HeroTitle>Our Mission</HeroTitle>
-              <HeroSubtitle>
-                Empowering vibrant individuals to achieve their educational dreams
-                and create something extraordinary
-              </HeroSubtitle>
-            </HeroContent>
-          </HeroSection>
+      <Container>
+        <HeroSection>
+          <Title>Our Mission</Title>
+          <Subtitle>Empowering vibrant individuals to achieve their educational dreams and create something extraordinary</Subtitle>
+        </HeroSection>
 
-          {/* Mission & Vision Cards */}
-          <MissionVisionSection variants={itemVariants}>
-            <MissionVisionGrid>
-              <MissionCard variants={itemVariants}>
-                <CardIcon>🎯</CardIcon>
-                <CardTitle>Our Mission</CardTitle>
-                <CardContent>
-                  <p>
-                    Our mission is to help vibrant and beautiful individuals full of potential
-                    who have the will to gain an education to create something extraordinary.
-                    We believe that education is the key to unlocking human potential and
-                    creating positive change in the world.
-                  </p>
-                  <HighlightBox>
-                    <HighlightText>
-                      We support students through mentorship, financial assistance,
-                      and comprehensive guidance throughout their educational journey.
-                    </HighlightText>
-                  </HighlightBox>
-                </CardContent>
-              </MissionCard>
+        <MissionVisionGrid>
+          <MissionCard>
+            <CardIcon>🎯</CardIcon>
+            <CardTitle>Our Mission</CardTitle>
+            <CardText>
+              Our mission is to help vibrant and beautiful individuals full of potential who have the will to gain an education
+              to create something extraordinary. We believe that education is the key to unlocking human potential and creating
+              positive change in the world.
+            </CardText>
+            <HighlightBox>
+              We support students through mentorship, financial assistance, and comprehensive guidance throughout their educational journey.
+            </HighlightBox>
+          </MissionCard>
 
-              <VisionCard variants={itemVariants}>
-                <CardIcon>🌟</CardIcon>
-                <CardTitle>Our Vision</CardTitle>
-                <CardContent>
-                  <p>
-                    We aim to support education by mentoring, providing aid, and inspiring
-                    those who have received help to pay it forward. Our vision is a world
-                    where geographical and financial barriers don't prevent talented
-                    individuals from accessing quality education.
-                  </p>
-                  <VisionList>
-                    <VisionItem>🤝 Mentorship and guidance</VisionItem>
-                    <VisionItem>💰 Financial assistance</VisionItem>
-                    <VisionItem>🔄 Pay-it-forward culture</VisionItem>
-                    <VisionItem>🌍 Global educational access</VisionItem>
-                  </VisionList>
-                </CardContent>
-              </VisionCard>
-            </MissionVisionGrid>
-          </MissionVisionSection>
+          <VisionCard>
+            <CardIcon>🌟</CardIcon>
+            <CardTitle>Our Vision</CardTitle>
+            <CardText>
+              We aim to support education by mentoring, providing aid, and inspiring those who have received help to pay it forward.
+              Our vision is a world where geographical and financial barriers don't prevent talented individuals from accessing quality education.
+            </CardText>
+            <VisionList>
+              <VisionItem>🤝 Mentorship and guidance</VisionItem>
+              <VisionItem>💰 Financial assistance</VisionItem>
+              <VisionItem>🔄 Pay-it-forward culture</VisionItem>
+              <VisionItem>🌍 Global educational access</VisionItem>
+            </VisionList>
+          </VisionCard>
+        </MissionVisionGrid>
 
-          {/* Impact Stats */}
-          <ImpactSection variants={itemVariants}>
-            <SectionTitle>Our Impact</SectionTitle>
-            <ImpactGrid>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>20+</ImpactNumber>
-                <ImpactLabel>Students Helped</ImpactLabel>
-                <ImpactDescription>International students supported in 2024</ImpactDescription>
-              </ImpactCard>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>$8,985</ImpactNumber>
-                <ImpactLabel>Financial Aid</ImpactLabel>
-                <ImpactDescription>Total donations distributed in 2024</ImpactDescription>
-              </ImpactCard>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>5+</ImpactNumber>
-                <ImpactLabel>Countries</ImpactLabel>
-                <ImpactDescription>Students from different nations</ImpactDescription>
-              </ImpactCard>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>100%</ImpactNumber>
-                <ImpactLabel>Success Rate</ImpactLabel>
-                <ImpactDescription>Students who received visas</ImpactDescription>
-              </ImpactCard>
-            </ImpactGrid>
-          </ImpactSection>
+        <Section>
+          <SectionTitle>Our Impact</SectionTitle>
+          <StatsGrid>
+            <StatCard>
+              <StatNumber>20+</StatNumber>
+              <StatLabel>Students Helped</StatLabel>
+              <StatDescription>International students supported in 2024</StatDescription>
+            </StatCard>
+            <StatCard>
+              <StatNumber>$8,985</StatNumber>
+              <StatLabel>Financial Aid</StatLabel>
+              <StatDescription>Total donations distributed in 2024</StatDescription>
+            </StatCard>
+            <StatCard>
+              <StatNumber>5+</StatNumber>
+              <StatLabel>Countries</StatLabel>
+              <StatDescription>Students from different nations</StatDescription>
+            </StatCard>
+            <StatCard>
+              <StatNumber>100%</StatNumber>
+              <StatLabel>Success Rate</StatLabel>
+              <StatDescription>Students who received visas</StatDescription>
+            </StatCard>
+          </StatsGrid>
+        </Section>
 
-          {/* Testimonials */}
-          <TestimonialsSection variants={itemVariants}>
-            <SectionTitle>Success Stories</SectionTitle>
-            <TestimonialSubtitle>
-              Hear from the students whose lives have been transformed through education
-            </TestimonialSubtitle>
+        <Section>
+          <SectionTitle>Success Stories</SectionTitle>
+          <TestimonialSubtitle>
+            Hear from the students whose lives have been transformed through education
+          </TestimonialSubtitle>
 
-            <TestimonialsGrid>
-              {testimonials.map((testimonial, index) => (
-                <TestimonialCard key={testimonial.id} variants={itemVariants} delay={index * 0.1}>
-                  <TestimonialContent>
-                    <QuoteIcon>"</QuoteIcon>
-                    <TestimonialText>
-                      {testimonial.testimony}
-                    </TestimonialText>
-                    {testimonial.originalTestimony && (
-                      <OriginalQuote>
-                        <OriginalQuoteLabel>Original (French):</OriginalQuoteLabel>
-                        <OriginalQuoteText>"{testimonial.originalTestimony}"</OriginalQuoteText>
-                      </OriginalQuote>
-                    )}
-                  </TestimonialContent>
-                  <TestimonialFooter>
-                    <AuthorInfo>
-                      <AuthorName>{testimonial.author}</AuthorName>
-                      <AuthorDetails>
-                        <CountryFlag>{testimonial.flag}</CountryFlag>
-                        <span>{testimonial.country}</span>
-                        <span>•</span>
-                        <span>{testimonial.program}</span>
-                      </AuthorDetails>
-                    </AuthorInfo>
-                  </TestimonialFooter>
-                </TestimonialCard>
-              ))}
-            </TestimonialsGrid>
-          </TestimonialsSection>
+          <TestimonialsContainer>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={testimonial.id}>
+                <TestimonialContent>
+                  <QuoteIcon>"</QuoteIcon>
+                  <TestimonialText>
+                    {testimonial.testimony}
+                  </TestimonialText>
+                  {testimonial.originalTestimony && (
+                    <OriginalQuote>
+                      <OriginalQuoteLabel>Original (French):</OriginalQuoteLabel>
+                      <OriginalQuoteText>"{testimonial.originalTestimony}"</OriginalQuoteText>
+                    </OriginalQuote>
+                  )}
+                </TestimonialContent>
+                <TestimonialFooter>
+                  <AuthorName>{testimonial.author}</AuthorName>
+                  <AuthorDetails>
+                    <CountryFlag>{testimonial.flag}</CountryFlag>
+                    <span>{testimonial.country}</span>
+                    <span>•</span>
+                    <span>{testimonial.program}</span>
+                  </AuthorDetails>
+                </TestimonialFooter>
+              </TestimonialCard>
+            ))}
+          </TestimonialsContainer>
+        </Section>
 
-          {/* Values Section */}
-          <ValuesSection variants={itemVariants}>
-            <SectionTitle>Our Core Values</SectionTitle>
-            <ValuesGrid>
-              <ValueCard variants={itemVariants}>
-                <ValueIcon>❤️</ValueIcon>
-                <ValueTitle>Compassion</ValueTitle>
-                <ValueDescription>
-                  We approach every student's journey with empathy and understanding,
-                  recognizing the challenges they face.
-                </ValueDescription>
-              </ValueCard>
-              <ValueCard variants={itemVariants}>
-                <ValueIcon>🤝</ValueIcon>
-                <ValueTitle>Integrity</ValueTitle>
-                <ValueDescription>
-                  We operate with honesty and transparency, building trust through
-                  our actions and commitments.
-                </ValueDescription>
-              </ValueCard>
-              <ValueCard variants={itemVariants}>
-                <ValueIcon>🌱</ValueIcon>
-                <ValueTitle>Growth</ValueTitle>
-                <ValueDescription>
-                  We believe in the potential for growth and transformation through
-                  education and personal development.
-                </ValueDescription>
-              </ValueCard>
-              <ValueCard variants={itemVariants}>
-                <ValueIcon>🔄</ValueIcon>
-                <ValueTitle>Pay It Forward</ValueTitle>
-                <ValueDescription>
-                  We inspire students to help others once they've achieved their goals,
-                  creating a cycle of support.
-                </ValueDescription>
-              </ValueCard>
-            </ValuesGrid>
-          </ValuesSection>
+        <Section>
+          <SectionTitle>Our Core Values</SectionTitle>
+          <ValuesGrid>
+            <ValueCard>
+              <ValueIcon>❤️</ValueIcon>
+              <ValueTitle>Compassion</ValueTitle>
+              <ValueText>
+                We approach every student's journey with empathy and understanding, recognizing the challenges they face.
+              </ValueText>
+            </ValueCard>
+            <ValueCard>
+              <ValueIcon>🤝</ValueIcon>
+              <ValueTitle>Integrity</ValueTitle>
+              <ValueText>
+                We operate with honesty and transparency, building trust through our actions and commitments.
+              </ValueText>
+            </ValueCard>
+            <ValueCard>
+              <ValueIcon>🌱</ValueIcon>
+              <ValueTitle>Growth</ValueTitle>
+              <ValueText>
+                We believe in the potential for growth and transformation through education and personal development.
+              </ValueText>
+            </ValueCard>
+            <ValueCard>
+              <ValueIcon>🔄</ValueIcon>
+              <ValueTitle>Pay It Forward</ValueTitle>
+              <ValueText>
+                We inspire students to help others once they've achieved their goals, creating a cycle of support.
+              </ValueText>
+            </ValueCard>
+          </ValuesGrid>
+        </Section>
 
-          {/* Call to Action */}
-          <CallToActionSection variants={itemVariants}>
-            <CTAContent>
-              <CTATitle>Join Our Mission</CTATitle>
-              <CTADescription>
-                Help us continue supporting international students in achieving their educational dreams.
-                Every contribution makes a difference in someone's life.
-              </CTADescription>
-              <CTAButtons>
-                <CTAButton href="/get-involved">Get Involved</CTAButton>
-                <CTAButton href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a"
-                          target="_blank" rel="noopener noreferrer" secondary>
-                  Donate Now
-                </CTAButton>
-              </CTAButtons>
-            </CTAContent>
-          </CallToActionSection>
-        </Container>
-      </PageContainer>
+        <CallToActionSection>
+          <CTATitle>Join Our Mission</CTATitle>
+          <CTAText>
+            Help us continue supporting international students in achieving their educational dreams.
+            Every contribution makes a difference in someone's life.
+          </CTAText>
+          <CTAButtons>
+            <CTAButton href="/get-involved">Get Involved</CTAButton>
+            <CTAButton href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a"
+                      target="_blank" rel="noopener noreferrer" secondary>
+              Donate Now
+            </CTAButton>
+          </CTAButtons>
+        </CallToActionSection>
+      </Container>
     </>
   );
 };
 
 // Styled Components
-const PageContainer = styled(motion.div)`
-  min-height: 100vh;
-  background: linear-gradient(135deg, ${colors.gray50} 0%, ${colors.white} 100%);
-  padding: ${spacing[8]} 0;
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: ${spacing[6]} 0;
-  }
-`;
-
 const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 ${spacing[6]};
+  padding: ${spacing[8]} ${spacing[6]};
 
   @media (max-width: ${breakpoints.md}) {
-    padding: 0 ${spacing[4]};
+    padding: ${spacing[6]} ${spacing[4]};
   }
 `;
 
-const HeroSection = styled(motion.section)`
+const HeroSection = styled.section`
   text-align: center;
   margin-bottom: ${spacing[12]};
 `;
 
-const HeroContent = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const HeroTitle = styled.h1`
+const Title = styled.h1`
   font-family: ${typography.fontSecondary};
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: ${typography.fontWeightBold};
@@ -292,21 +214,20 @@ const HeroTitle = styled.h1`
   line-height: ${typography.lineHeight.tight};
 `;
 
-const HeroSubtitle = styled.p`
+const Subtitle = styled.p`
   font-size: clamp(1.125rem, 3vw, 1.5rem);
   color: ${colors.gray600};
   line-height: ${typography.lineHeight.relaxed};
   font-weight: ${typography.fontWeightMedium};
-`;
-
-const MissionVisionSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
+  max-width: 800px;
+  margin: 0 auto;
 `;
 
 const MissionVisionGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: ${spacing[8]};
+  margin-bottom: ${spacing[12]};
 
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: 1fr;
@@ -314,7 +235,7 @@ const MissionVisionGrid = styled.div`
   }
 `;
 
-const MissionCard = styled(motion.div)`
+const MissionCard = styled.div`
   background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%);
   color: ${colors.white};
   border-radius: ${borderRadius.xl};
@@ -331,7 +252,7 @@ const MissionCard = styled(motion.div)`
   }
 `;
 
-const VisionCard = styled(motion.div)`
+const VisionCard = styled.div`
   background: ${colors.white};
   border-radius: ${borderRadius.xl};
   padding: ${spacing[8]};
@@ -364,13 +285,11 @@ const CardTitle = styled.h2`
   line-height: ${typography.lineHeight.tight};
 `;
 
-const CardContent = styled.div`
-  p {
-    font-size: ${typography.fontSize.lg};
-    line-height: ${typography.lineHeight.relaxed};
-    margin-bottom: ${spacing[6]};
-    text-align: center;
-  }
+const CardText = styled.p`
+  font-size: ${typography.fontSize.lg};
+  line-height: ${typography.lineHeight.relaxed};
+  margin-bottom: ${spacing[6]};
+  text-align: center;
 `;
 
 const HighlightBox = styled.div`
@@ -378,12 +297,9 @@ const HighlightBox = styled.div`
   padding: ${spacing[4]};
   border-radius: ${borderRadius.lg};
   border: 1px solid rgba(255, 255, 255, 0.2);
-`;
-
-const HighlightText = styled.p`
   font-size: ${typography.fontSize.base};
   font-style: italic;
-  margin: 0 !important;
+  text-align: center;
   opacity: 0.9;
 `;
 
@@ -405,7 +321,7 @@ const VisionItem = styled.li`
   }
 `;
 
-const ImpactSection = styled(motion.section)`
+const Section = styled.section`
   margin-bottom: ${spacing[12]};
 `;
 
@@ -419,7 +335,7 @@ const SectionTitle = styled.h2`
   line-height: ${typography.lineHeight.tight};
 `;
 
-const ImpactGrid = styled.div`
+const StatsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: ${spacing[6]};
@@ -430,7 +346,7 @@ const ImpactGrid = styled.div`
   }
 `;
 
-const ImpactCard = styled(motion.div)`
+const StatCard = styled.div`
   background: ${colors.white};
   border-radius: ${borderRadius.xl};
   padding: ${spacing[6]};
@@ -445,7 +361,7 @@ const ImpactCard = styled(motion.div)`
   }
 `;
 
-const ImpactNumber = styled.div`
+const StatNumber = styled.div`
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: ${typography.fontWeightBold};
   color: ${colors.primary};
@@ -453,21 +369,17 @@ const ImpactNumber = styled.div`
   line-height: ${typography.lineHeight.none};
 `;
 
-const ImpactLabel = styled.div`
+const StatLabel = styled.div`
   font-size: ${typography.fontSize.lg};
   font-weight: ${typography.fontWeightSemiBold};
   color: ${colors.gray800};
   margin-bottom: ${spacing[2]};
 `;
 
-const ImpactDescription = styled.div`
+const StatDescription = styled.div`
   font-size: ${typography.fontSize.sm};
   color: ${colors.gray600};
   line-height: ${typography.lineHeight.relaxed};
-`;
-
-const TestimonialsSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
 `;
 
 const TestimonialSubtitle = styled.p`
@@ -480,7 +392,7 @@ const TestimonialSubtitle = styled.p`
   margin-right: auto;
 `;
 
-const TestimonialsGrid = styled.div`
+const TestimonialsContainer = styled.div`
   display: grid;
   gap: ${spacing[8]};
 
@@ -489,7 +401,7 @@ const TestimonialsGrid = styled.div`
   }
 `;
 
-const TestimonialCard = styled(motion.div)`
+const TestimonialCard = styled.div`
   background: ${colors.white};
   border-radius: ${borderRadius.xl};
   padding: ${spacing[8]};
@@ -560,8 +472,6 @@ const TestimonialFooter = styled.div`
   padding-top: ${spacing[4]};
 `;
 
-const AuthorInfo = styled.div``;
-
 const AuthorName = styled.div`
   font-size: ${typography.fontSize.lg};
   font-weight: ${typography.fontWeightSemiBold};
@@ -581,10 +491,6 @@ const CountryFlag = styled.span`
   font-size: ${typography.fontSize.lg};
 `;
 
-const ValuesSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
-`;
-
 const ValuesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -596,7 +502,7 @@ const ValuesGrid = styled.div`
   }
 `;
 
-const ValueCard = styled(motion.div)`
+const ValueCard = styled.div`
   background: ${colors.white};
   border-radius: ${borderRadius.xl};
   padding: ${spacing[6]};
@@ -624,22 +530,19 @@ const ValueTitle = styled.h3`
   margin-bottom: ${spacing[3]};
 `;
 
-const ValueDescription = styled.p`
+const ValueText = styled.p`
   font-size: ${typography.fontSize.sm};
   line-height: ${typography.lineHeight.relaxed};
   color: ${colors.gray600};
   margin: 0;
 `;
 
-const CallToActionSection = styled(motion.section)`
-  text-align: center;
-`;
-
-const CTAContent = styled.div`
+const CallToActionSection = styled.div`
   background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%);
   color: ${colors.white};
   padding: ${spacing[12]} ${spacing[8]};
   border-radius: ${borderRadius['2xl']};
+  text-align: center;
   box-shadow: ${shadows.xl};
 
   @media (max-width: ${breakpoints.md}) {
@@ -655,7 +558,7 @@ const CTATitle = styled.h2`
   line-height: ${typography.lineHeight.tight};
 `;
 
-const CTADescription = styled.p`
+const CTAText = styled.p`
   font-size: ${typography.fontSize.lg};
   line-height: ${typography.lineHeight.relaxed};
   margin-bottom: ${spacing[8]};
@@ -717,4 +620,4 @@ const CTAButton = styled.a`
   }
 `;
 
-export default OurMission;
+export default OurMissionSimple;

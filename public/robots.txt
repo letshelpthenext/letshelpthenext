@@ -1,3 +1,17 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://letshelpthenext.org/sitemap.xml
+
+# Specific pages to prioritize
+Allow: /home
+Allow: /home/get-involved
+Allow: /home/our-work
+Allow: /home/our-mission
+
+# Block development/test files
+Disallow: /static/
+Disallow: /*.json$
+Disallow: /test/
