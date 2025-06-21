@@ -1,9 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
 import visaImage from '../../assets/visa.jpeg';
+import {
+  PageContainer,
+  Container,
+  HeroSection,
+  HeroContent,
+  HeroTitle,
+  HeroSubtitle,
+  ContentSection,
+  SectionCard,
+  CardHeader,
+  CardIcon,
+  CardTitle,
+  CardSubtitle,
+  Emphasis,
+  CardContent,
+  InitiativesSection,
+  SectionTitle,
+  InitiativesGrid,
+  InitiativeCard,
+  InitiativeIcon,
+  InitiativeTitle,
+  InitiativeContent,
+  HighlightBox,
+  HighlightTitle,
+  ImpactStats,
+  ImpactStat,
+  StatNumber,
+  StatLabel,
+  ProcessSection,
+  ProcessGrid,
+  ProcessStep,
+  StepNumber,
+  StepContent,
+  StepTitle,
+  StepDescription,
+  StepList,
+  StepListItem,
+  VisaSection,
+  VisaContent,
+  VisaImageWrapper,
+  VisaImage,
+  SupportSection,
+  FutureSection,
+  FutureContent,
+  FutureTitle,
+  CallToAction,
+  CTAButton
+} from './ourWork.styles';
 
 const OurWork = () => {
   const containerVariants = {
@@ -49,7 +93,7 @@ const OurWork = () => {
             <HeroContent>
               <HeroTitle>Our Work</HeroTitle>
               <HeroSubtitle>
-                Empowering international students through comprehensive support, 
+                Empowering international students through comprehensive support,
                 scholarships, and mentorship programs
               </HeroSubtitle>
             </HeroContent>
@@ -124,7 +168,7 @@ const OurWork = () => {
           {/* Key Initiatives */}
           <InitiativesSection variants={itemVariants}>
             <SectionTitle>Key Initiatives</SectionTitle>
-            
+
             <InitiativesGrid>
               <InitiativeCard variants={itemVariants}>
                 <InitiativeIcon>🤝</InitiativeIcon>
@@ -188,14 +232,14 @@ const OurWork = () => {
           {/* Process Section */}
           <ProcessSection variants={itemVariants}>
             <SectionTitle>Your Journey to Success</SectionTitle>
-            
+
             <ProcessGrid>
               <ProcessStep variants={itemVariants}>
                 <StepNumber>1</StepNumber>
                 <StepContent>
                   <StepTitle>Research & Preparation</StepTitle>
                   <StepDescription>
-                    The difference between successfully going through the process of 
+                    The difference between successfully going through the process of
                     attending university in the United States is doing your own research.
                   </StepDescription>
                   <StepList>
@@ -214,14 +258,14 @@ const OurWork = () => {
                   <StepContent>
                     <StepTitle>Visa Application Process</StepTitle>
                     <StepDescription>
-                      After being accepted by a school, the next process is applying for a 
-                      student visa. Since qualifying for a student visa is a courtesy, giving 
+                      After being accepted by a school, the next process is applying for a
+                      student visa. Since qualifying for a student visa is a courtesy, giving
                       oneself the best shot may be the only hope.
                     </StepDescription>
                     <p>
-                      As a result of providing assistance to applicants in different countries, 
-                      we have learned that each region comes with its difficulties. The 
-                      social-political situation of your home country and your financial 
+                      As a result of providing assistance to applicants in different countries,
+                      we have learned that each region comes with its difficulties. The
+                      social-political situation of your home country and your financial
                       situation contribute to determining the probability of being granted a visa.
                     </p>
                   </StepContent>
@@ -271,7 +315,7 @@ const OurWork = () => {
                 lives of these students.
               </p>
               <CallToAction>
-                <CTAButton href="/get-involved">Get Involved Today</CTAButton>
+                <CTAButton href="/home/get-involved">Get Involved Today</CTAButton>
                 <CTAButton href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" target="_blank" rel="noopener noreferrer" secondary>
                   Make a Donation
                 </CTAButton>
@@ -285,441 +329,6 @@ const OurWork = () => {
 };
 
 // Styled Components
-const PageContainer = styled(motion.div)`
-  min-height: 100vh;
-  background: linear-gradient(135deg, ${colors.gray50} 0%, ${colors.white} 100%);
-  padding: ${spacing[8]} 0;
 
-  @media (max-width: ${breakpoints.md}) {
-    padding: ${spacing[6]} 0;
-  }
-`;
-
-const Container = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 ${spacing[6]};
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: 0 ${spacing[4]};
-  }
-`;
-
-const HeroSection = styled(motion.section)`
-  text-align: center;
-  margin-bottom: ${spacing[12]};
-`;
-
-const HeroContent = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const HeroTitle = styled.h1`
-  font-family: ${typography.fontSecondary};
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: ${typography.fontWeightBold};
-  color: ${colors.primary};
-  margin-bottom: ${spacing[4]};
-  line-height: ${typography.lineHeight.tight};
-`;
-
-const HeroSubtitle = styled.p`
-  font-size: clamp(1.125rem, 3vw, 1.5rem);
-  color: ${colors.gray600};
-  line-height: ${typography.lineHeight.relaxed};
-  font-weight: ${typography.fontWeightMedium};
-`;
-
-const ContentSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
-`;
-
-const SectionCard = styled(motion.div)`
-  background: ${colors.white};
-  border-radius: ${borderRadius.xl};
-  padding: ${spacing[8]};
-  margin-bottom: ${spacing[8]};
-  box-shadow: ${shadows.lg};
-  border: 1px solid ${colors.gray100};
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: ${shadows.xl};
-  }
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: ${spacing[6]};
-  }
-`;
-
-const CardHeader = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${spacing[4]};
-  margin-bottom: ${spacing[4]};
-`;
-
-const CardIcon = styled.div`
-  font-size: 2.5rem;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-`;
-
-const CardTitle = styled.h2`
-  font-family: ${typography.fontSecondary};
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: ${typography.fontWeightBold};
-  color: ${colors.primary};
-  margin: 0;
-  line-height: ${typography.lineHeight.tight};
-`;
-
-const CardSubtitle = styled.h3`
-  font-size: ${typography.fontSize.xl};
-  font-weight: ${typography.fontWeightSemiBold};
-  color: ${colors.secondary};
-  margin-bottom: ${spacing[4]};
-  line-height: ${typography.lineHeight.snug};
-`;
-
-const Emphasis = styled.p`
-  font-style: italic;
-  color: ${colors.gray600};
-  font-size: ${typography.fontSize.lg};
-  margin-bottom: ${spacing[6]};
-  padding: ${spacing[4]};
-  background: ${colors.gray50};
-  border-left: 4px solid ${colors.secondary};
-  border-radius: ${borderRadius.md};
-`;
-
-const CardContent = styled.div`
-  p {
-    font-size: ${typography.fontSize.base};
-    line-height: ${typography.lineHeight.relaxed};
-    color: ${colors.gray700};
-    margin-bottom: ${spacing[4]};
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-`;
-
-const SectionTitle = styled.h2`
-  font-family: ${typography.fontSecondary};
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: ${typography.fontWeightBold};
-  color: ${colors.primary};
-  text-align: center;
-  margin-bottom: ${spacing[8]};
-  line-height: ${typography.lineHeight.tight};
-`;
-
-const InitiativesSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
-`;
-
-const InitiativesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: ${spacing[8]};
-
-  @media (max-width: ${breakpoints.md}) {
-    grid-template-columns: 1fr;
-    gap: ${spacing[6]};
-  }
-`;
-
-const InitiativeCard = styled(motion.div)`
-  background: ${colors.white};
-  border-radius: ${borderRadius.xl};
-  padding: ${spacing[8]};
-  box-shadow: ${shadows.md};
-  border: 1px solid ${colors.gray100};
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: ${shadows.xl};
-  }
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: ${spacing[6]};
-  }
-`;
-
-const InitiativeIcon = styled.div`
-  font-size: 3rem;
-  margin-bottom: ${spacing[4]};
-  text-align: center;
-`;
-
-const InitiativeTitle = styled.h3`
-  font-family: ${typography.fontSecondary};
-  font-size: ${typography.fontSize.xl};
-  font-weight: ${typography.fontWeightBold};
-  color: ${colors.primary};
-  text-align: center;
-  margin-bottom: ${spacing[4]};
-  line-height: ${typography.lineHeight.snug};
-`;
-
-const InitiativeContent = styled.div`
-  p {
-    font-size: ${typography.fontSize.base};
-    line-height: ${typography.lineHeight.relaxed};
-    color: ${colors.gray700};
-    margin-bottom: ${spacing[4]};
-  }
-`;
-
-const HighlightBox = styled.div`
-  background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%);
-  color: ${colors.white};
-  padding: ${spacing[6]};
-  border-radius: ${borderRadius.lg};
-  margin-top: ${spacing[6]};
-`;
-
-const HighlightTitle = styled.h4`
-  font-size: ${typography.fontSize.lg};
-  font-weight: ${typography.fontWeightBold};
-  margin-bottom: ${spacing[4]};
-  text-align: center;
-`;
-
-const ImpactStats = styled.div`
-  display: flex;
-  justify-content: space-around;
-  gap: ${spacing[4]};
-`;
-
-const ImpactStat = styled.div`
-  text-align: center;
-`;
-
-const StatNumber = styled.div`
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: ${typography.fontWeightBold};
-  margin-bottom: ${spacing[2]};
-`;
-
-const StatLabel = styled.div`
-  font-size: ${typography.fontSize.sm};
-  opacity: 0.9;
-  font-weight: ${typography.fontWeightMedium};
-`;
-
-const ProcessSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
-`;
-
-const ProcessGrid = styled.div`
-  display: grid;
-  gap: ${spacing[8]};
-`;
-
-const ProcessStep = styled(motion.div)`
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: ${spacing[6]};
-  align-items: start;
-
-  @media (max-width: ${breakpoints.md}) {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-`;
-
-const StepNumber = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%);
-  color: ${colors.white};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: ${typography.fontSize['2xl']};
-  font-weight: ${typography.fontWeightBold};
-  box-shadow: ${shadows.lg};
-  flex-shrink: 0;
-
-  @media (max-width: ${breakpoints.md}) {
-    margin: 0 auto ${spacing[4]} auto;
-  }
-`;
-
-const StepContent = styled.div`
-  background: ${colors.white};
-  border-radius: ${borderRadius.xl};
-  padding: ${spacing[8]};
-  box-shadow: ${shadows.md};
-  border: 1px solid ${colors.gray100};
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: ${spacing[6]};
-  }
-`;
-
-const StepTitle = styled.h3`
-  font-family: ${typography.fontSecondary};
-  font-size: ${typography.fontSize.xl};
-  font-weight: ${typography.fontWeightBold};
-  color: ${colors.primary};
-  margin-bottom: ${spacing[4]};
-`;
-
-const StepDescription = styled.p`
-  font-size: ${typography.fontSize.base};
-  line-height: ${typography.lineHeight.relaxed};
-  color: ${colors.gray700};
-  margin-bottom: ${spacing[6]};
-`;
-
-const StepList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const StepListItem = styled.li`
-  font-size: ${typography.fontSize.base};
-  line-height: ${typography.lineHeight.relaxed};
-  color: ${colors.gray700};
-  margin-bottom: ${spacing[3]};
-  padding-left: ${spacing[2]};
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
-const VisaSection = styled(motion.div)`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: ${spacing[8]};
-  align-items: start;
-
-  @media (max-width: ${breakpoints.lg}) {
-    grid-template-columns: 1fr;
-    gap: ${spacing[6]};
-  }
-`;
-
-const VisaContent = styled.div`
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: ${spacing[6]};
-  align-items: start;
-
-  @media (max-width: ${breakpoints.md}) {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-`;
-
-const VisaImageWrapper = styled.div`
-  background: ${colors.white};
-  border-radius: ${borderRadius.xl};
-  padding: ${spacing[6]};
-  box-shadow: ${shadows.md};
-  border: 1px solid ${colors.gray100};
-  align-self: start;
-
-  @media (max-width: ${breakpoints.lg}) {
-    order: -1;
-  }
-`;
-
-const VisaImage = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: ${borderRadius.lg};
-  object-fit: cover;
-`;
-
-const SupportSection = styled(motion.section)`
-  margin-bottom: ${spacing[12]};
-`;
-
-const FutureSection = styled(motion.section)`
-  text-align: center;
-`;
-
-const FutureContent = styled.div`
-  background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%);
-  color: ${colors.white};
-  padding: ${spacing[12]} ${spacing[8]};
-  border-radius: ${borderRadius['2xl']};
-  box-shadow: ${shadows.xl};
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: ${spacing[8]} ${spacing[6]};
-  }
-`;
-
-const FutureTitle = styled.h2`
-  font-family: ${typography.fontSecondary};
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: ${typography.fontWeightBold};
-  margin-bottom: ${spacing[6]};
-  line-height: ${typography.lineHeight.tight};
-`;
-
-const CallToAction = styled.div`
-  display: flex;
-  gap: ${spacing[4]};
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: ${spacing[8]};
-
-  @media (max-width: ${breakpoints.sm}) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-const CTAButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: ${spacing[4]} ${spacing[8]};
-  border-radius: ${borderRadius.lg};
-  font-size: ${typography.fontSize.lg};
-  font-weight: ${typography.fontWeightSemiBold};
-  text-decoration: none;
-  transition: all 0.3s ease;
-  min-width: 200px;
-  border: 2px solid ${colors.white};
-
-  ${props => props.secondary ? `
-    background: transparent;
-    color: ${colors.white};
-    
-    &:hover {
-      background: ${colors.white};
-      color: ${colors.primary};
-      text-decoration: none;
-    }
-  ` : `
-    background: ${colors.white};
-    color: ${colors.primary};
-    
-    &:hover {
-      background: transparent;
-      color: ${colors.white};
-      text-decoration: none;
-      transform: translateY(-2px);
-    }
-  `}
-
-  &:focus {
-    outline: 2px solid ${colors.white};
-    outline-offset: 2px;
-  }
-`;
 
 export default OurWork;

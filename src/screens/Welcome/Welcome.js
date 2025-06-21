@@ -1,5 +1,4 @@
 
-import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import {
   BackgroundDecoration,
@@ -17,8 +16,7 @@ import {
   ValueQuote,
   ActionButton,
   StyledNavLink,
-  CardIcon,
-  CustomDiv
+  // CardIcon,
 } from './welcome.styles';
 import { motion } from 'framer-motion';
 import loveImage from '../../assets/home.jpg';
