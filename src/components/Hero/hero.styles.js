@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors, spacing, typography, breakpoints, shadows, borderRadius } from '../../styles/tokens';
 import { motion } from 'framer-motion';
 // import media from '../../utilities/media';
-// import { useWindowWide as windowWidth } from '../../utilities/windowWidthDetector';
+// import { useWindowWidth } from '../../utilities/windowWidthDetector';
 
 export const HeroContainer = styled.div`
   position: relative;
@@ -257,24 +257,34 @@ export const SecondaryButton = styled(motion.a)`
 `;
 
 export const StatsContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: row;
-  padding: 0 ${spacing[4]} ${spacing[8]};
+  padding: 0 ${spacing[4]} ${spacing[3]};
   max-width: 800px;
   margin: 0 auto;
 
   @media (max-width: ${breakpoints.md}) {
-    padding: 0 ${spacing[4]} ${spacing[6]};
+    padding: 0 ${spacing[4]} ${spacing[2]};
   }
 `;
 
 export const StatsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: ${spacing[4]};
+  display: flex;
+  justify-content: center;
+  gap: ${spacing[6]};
+  flex-wrap: wrap;
+  margin-top: -${spacing[20]};
+  margin-bottom: ${spacing[10]};
+
+  @media (max-width: ${breakpoints.md}) {
+    gap: ${spacing[4]};
+  }
 
   @media (max-width: ${breakpoints.sm}) {
-    grid-template-columns: repeat(3, 1fr);
+    gap: ${spacing[3]};
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    flex-direction: column;
+    align-items: center;
     gap: ${spacing[2]};
   }
 `;
@@ -284,12 +294,25 @@ export const StatCard = styled(motion.div)`
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: ${borderRadius.xl};
-  padding: ${spacing[4]};
+  padding: ${spacing[4]} ${spacing[6]};
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  min-width: 140px;
+  flex: 0 0 auto;
+
+  @media (max-width: ${breakpoints.md}) {
+    padding: ${spacing[3]} ${spacing[5]};
+    min-width: 120px;
+  }
 
   @media (max-width: ${breakpoints.sm}) {
-    padding: ${spacing[3]};
+    padding: ${spacing[3]} ${spacing[4]};
+    min-width: 100px;
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    min-width: 200px;
+    padding: ${spacing[3]} ${spacing[6]};
   }
 `;
 
