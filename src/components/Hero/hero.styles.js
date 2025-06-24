@@ -114,7 +114,7 @@ export const HeroBadge = styled(motion.div)`
   padding: ${spacing[2]} ${spacing[4]};
   font-size: ${typography.fontSize.sm};
   font-weight: ${typography.fontWeightMedium};
-  margin-bottom: ${spacing[6]};
+  margin-bottom: ${spacing[2]};
   box-shadow: ${shadows.lg};
 
   @media (max-width: ${breakpoints.md}) {
@@ -129,7 +129,7 @@ export const HeroTitle = styled(motion.h1)`
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: ${typography.fontWeightBold};
   line-height: ${typography.lineHeight.tight};
-  margin-bottom: ${spacing[6]};
+  margin-bottom: ${spacing[2]};
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
   -webkit-background-clip: text;
@@ -146,7 +146,7 @@ export const HeroSubtitle = styled(motion.p)`
   font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: ${typography.fontWeightMedium};
   line-height: ${typography.lineHeight.relaxed};
-  margin-bottom: ${spacing[4]};
+  margin-bottom: ${spacing[2]};
   opacity: 0.95;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 

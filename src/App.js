@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Welcome from './screens/Welcome/Welcome';
-import Hero from './components/Hero/HeroEnhanced';
+import Hero from './components/Hero/Hero';
 // import BlogsHeader from './components/BlogsHeader/BlogsHeader';
 import HomeScreen from './screens/Home/Home';
 import GetInvolvedScreen from './screens/Get-Involved/GetInvolved';
