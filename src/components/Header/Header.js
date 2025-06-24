@@ -21,6 +21,15 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   min-height: 4rem;
+
+  @media (max-width: ${breakpoints.sm}) {
+    padding: 0 ${spacing[3]};
+    min-height: 3.5rem;
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    padding: 0 ${spacing[2]};
+  }
 `;
 
 const LogoLink = styled(NavLink)`
@@ -40,6 +49,14 @@ const LogoImage = styled.img`
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    height: 2rem;
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    height: 1.75rem;
   }
 `;
 
@@ -72,6 +89,10 @@ const NavMenu = styled.nav`
   display: flex;
   align-items: center;
   gap: ${spacing[6]};
+
+  @media (max-width: ${breakpoints.lg}) {
+    gap: ${spacing[4]};
+  }
 
   @media (max-width: ${breakpoints.md}) {
     position: absolute;

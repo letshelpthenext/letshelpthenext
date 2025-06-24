@@ -144,9 +144,19 @@ export const NavigationGrid = styled(motion.div)`
   gap: ${spacing[4]};
   margin-bottom: ${spacing[8]};
 
+  @media (max-width: ${breakpoints.lg}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${spacing[3]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: 1fr;
     gap: ${spacing[3]};
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    gap: ${spacing[2]};
+    margin-bottom: ${spacing[6]};
   }
 `;
 

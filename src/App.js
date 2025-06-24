@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Welcome from './screens/Welcome/Welcome';
-import Hero from './components/Hero/Hero';
+import Hero from './components/Hero/HeroEnhanced';
 // import BlogsHeader from './components/BlogsHeader/BlogsHeader';
 import HomeScreen from './screens/Home/Home';
 import GetInvolvedScreen from './screens/Get-Involved/GetInvolved';
@@ -12,6 +12,7 @@ import OurMissionScreen from './screens/Our-Mission/OurMission';
 import EventsScreen from './screens/Events/Events';
 import NotFoundScreen from './screens/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
+import './styles/responsive.css';
 
 function App() {
   const location = useLocation();

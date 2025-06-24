@@ -211,8 +211,21 @@ const HeroContent = styled.div`
   position: relative;
   z-index: 10;
 
+  @media (max-width: ${breakpoints.lg}) {
+    max-width: 700px;
+    padding: ${spacing[7]} ${spacing[4]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     padding: ${spacing[6]} ${spacing[4]};
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    padding: ${spacing[4]} ${spacing[3]};
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    padding: ${spacing[3]} ${spacing[2]};
   }
 `;
 
@@ -304,10 +317,18 @@ const HeroActions = styled(motion.div)`
   justify-content: center;
   flex-wrap: wrap;
 
+  @media (max-width: ${breakpoints.lg}) {
+    gap: ${spacing[3]};
+  }
+
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
     align-items: center;
     gap: ${spacing[3]};
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    gap: ${spacing[2]};
   }
 `;
 

@@ -72,10 +72,20 @@ export const ValuesGrid = styled(motion.div)`
   margin: 0 auto;
   padding: 0 ${spacing[4]} ${spacing[12]};
 
+  @media (max-width: ${breakpoints.lg}) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: ${spacing[5]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: 1fr;
     gap: ${spacing[4]};
     padding: 0 ${spacing[4]} ${spacing[8]};
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    padding: 0 ${spacing[3]} ${spacing[6]};
+    gap: ${spacing[3]};
   }
 `;
 
@@ -88,12 +98,6 @@ export const ValueCard = styled(motion.div)`
   transition: all 0.3s ease;
   height: 400px;
 
-  /* pointer-events: auto; */
-
-  /* * {
-    pointer-events: none;
-  } */
-
   &:hover {
     transform: translateY(-8px);
     box-shadow: ${shadows['2xl']};
@@ -105,7 +109,16 @@ export const ValueCard = styled(motion.div)`
   }
 
   @media (max-width: ${breakpoints.md}) {
-    height: 350px;
+    height: 360px;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    height: 360px;
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    /* height: 300px; */
+    border-radius: ${borderRadius.xl};
   }
 `;
 
@@ -154,6 +167,16 @@ export const CardContent = styled.div`
   @media (max-width: ${breakpoints.md}) {
     height: 150px;
     padding: ${spacing[4]};
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    height: 120px;
+    padding: ${spacing[3]};
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    height: 100px;
+    padding: ${spacing[3]};
   }
 `;
 

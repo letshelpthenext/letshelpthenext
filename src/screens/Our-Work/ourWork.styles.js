@@ -143,9 +143,18 @@ export const InitiativesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: ${spacing[8]};
 
+  @media (max-width: ${breakpoints.lg}) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: ${spacing[6]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: 1fr;
     gap: ${spacing[6]};
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    gap: ${spacing[4]};
   }
 `;
 
@@ -393,9 +402,19 @@ export const CallToAction = styled.div`
   flex-wrap: wrap;
   margin-top: ${spacing[8]};
 
+  @media (max-width: ${breakpoints.md}) {
+    gap: ${spacing[3]};
+    margin-top: ${spacing[6]};
+  }
+
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
     align-items: center;
+    gap: ${spacing[3]};
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+    margin-top: ${spacing[4]};
   }
 `;
 

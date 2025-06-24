@@ -70,6 +70,22 @@ export const WaysToHelpGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: ${spacing[8]};
   margin-bottom: ${spacing[12]};
+
+  @media (max-width: ${breakpoints.lg}) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: ${spacing[6]};
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    grid-template-columns: 1fr;
+    gap: ${spacing[6]};
+    margin-bottom: ${spacing[8]};
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    gap: ${spacing[4]};
+    margin-bottom: ${spacing[6]};
+  }
 `;
 
 export const HelpCard = styled.div`
@@ -147,9 +163,18 @@ export const TeamGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: ${spacing[8]};
 
+  @media (max-width: ${breakpoints.lg}) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: ${spacing[6]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: 1fr;
     gap: ${spacing[6]};
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    gap: ${spacing[4]};
   }
 `;
 

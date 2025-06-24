@@ -37,8 +37,13 @@ const NewsletterForm = styled.form`
   max-width: 400px;
   margin: 0 auto;
 
-  @media (min-width: 500px) {
+  @media (min-width: 640px) {
     flex-direction: row;
+  }
+
+  @media (max-width: 375px) {
+    gap: ${spacing[3]};
+    max-width: 100%;
   }
 `;
 

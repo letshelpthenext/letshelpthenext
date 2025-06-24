@@ -21,10 +21,19 @@ export const FooterGrid = styled.div`
   gap: ${spacing[8]};
   margin-bottom: ${spacing[8]};
 
+  @media (max-width: ${breakpoints.lg}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${spacing[6]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: 1fr;
     gap: ${spacing[6]};
     text-align: center;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    gap: ${spacing[4]};
   }
 `;
 
