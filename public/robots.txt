@@ -5,13 +5,11 @@ Allow: /
 # Sitemap
 Sitemap: https://letshelpthenext.org/sitemap.xml
 
-# Specific pages to prioritize
+# Helpful hints to crawlers
 Allow: /home
 Allow: /home/get-involved
 Allow: /home/our-work
 Allow: /home/our-mission
 
-# Block development/test files
-Disallow: /static/
-Disallow: /*.json$
+# Block only obvious non-content paths
 Disallow: /test/

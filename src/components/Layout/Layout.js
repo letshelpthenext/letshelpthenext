@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { useLocation } from 'react-router-dom';
@@ -23,6 +23,8 @@ const Layout = ({ children, title, description, keywords }) => {
         <meta name="description" content={description || "Let's Help The Next (LHTN) provides financial assistance and scholarships to international students studying in the U.S. who face financial difficulties."} />
         <meta name="keywords" content={keywords || "international students, scholarships, financial assistance, education, nonprofit, LHTN"} />
         <meta name="author" content="Let's Help The Next" />
+        {/* Canonical */}
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

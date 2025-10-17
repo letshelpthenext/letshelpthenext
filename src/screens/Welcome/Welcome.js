@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import {
   BackgroundDecoration,
   WelcomeContainer,
@@ -96,6 +96,7 @@ const Welcome = () => {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
         <title>Welcome | Let's Help The Next</title>
         <meta
           name="description"
@@ -155,7 +156,7 @@ const Welcome = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <WelcomeLogo src={logo} alt="Let's Help The Next" />
+            <WelcomeLogo src={logo} alt="Let's Help The Next" loading="lazy" />
           </LogoContainer>
 
           <motion.div variants={containerVariants} initial="hidden" animate="visible">

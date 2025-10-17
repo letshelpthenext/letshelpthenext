@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import visaImage from '../../assets/visa.jpeg';
 import {
   PageContainer,
@@ -76,6 +76,7 @@ const OurWork = () => {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
         <title>Our Work - Let's Help The Next</title>
         <meta name="description" content="Learn about our initiatives supporting international students through scholarships, mentorship, and comprehensive support programs at BYU-I and beyond." />
         <meta property="og:title" content="Our Work - Let's Help The Next" />

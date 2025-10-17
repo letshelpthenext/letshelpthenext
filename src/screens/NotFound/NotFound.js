@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import {
   NotFoundContainer,
   BackgroundDecoration,
@@ -107,6 +107,7 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
         <title>Page Not Found | Let's Help The Next</title>
         <meta
           name="description"

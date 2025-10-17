@@ -195,6 +195,7 @@ const Header = () => {
           <LogoImage
             src={Logo}
             alt="Let's Help The Next - Supporting International Students"
+            loading="lazy"
           />
         </LogoLink>
 

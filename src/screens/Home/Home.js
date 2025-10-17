@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import OurStory from '../../components/Our-Story/OurStory';
 import AboutUs from '../../components/About-Us/AboutUs';
 import ContactForm from '../../components/ContactForm/ContactForm';
@@ -28,6 +28,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
         <title>Home | Let's Help The Next</title>
         <meta name="description" content="Let's Help The Next provides financial assistance and scholarships to international students studying in the U.S. who face financial difficulties. Supporting education through mentorship and aid." />
         <meta name="keywords" content="international students, scholarships, financial assistance, education support, nonprofit, student aid" />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, Link } from 'react-router-dom';
 import {
   HeroContainer,
   BackgroundOverlay,
@@ -199,7 +199,8 @@ const HeroEnhanced = () => {
                     Donate Now
                   </PrimaryButton>
                   <SecondaryButton
-                    href="/home/get-involved"
+                    as={Link}
+                    to="/home/get-involved"
                     aria-label="Learn more about volunteering opportunities"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
