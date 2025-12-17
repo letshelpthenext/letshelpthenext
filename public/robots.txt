@@ -1,3 +1,15 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://letshelpthenext.org/sitemap.xml
+
+# Helpful hints to crawlers
+Allow: /home
+Allow: /home/get-involved
+Allow: /home/our-work
+Allow: /home/our-mission
+
+# Block only obvious non-content paths
+Disallow: /test/

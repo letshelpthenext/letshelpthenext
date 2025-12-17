@@ -5,13 +5,13 @@ import {
   CaptionBox,
   ContentBox,
   CardWrapper,
-} from './contactus.styles';
+} from './contact.styles';
 import InputField from '../InputField';
 import { validators } from '../../utilities/Validator';
 import Message from '../Message';
 import NewsLetterSignUp from '../NewsLetterSignUp/NewsLetterSignUp';
 
-const ContactUs = () => {
+const Contact = () => {
   const form = useRef();
   const [fullName, setFullName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
@@ -148,4 +148,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;
