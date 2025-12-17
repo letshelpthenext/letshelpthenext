@@ -4,7 +4,19 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1F9BCF" />
+    <meta name="theme-color" content="#0E7366" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
+
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <!-- DNS Prefetch for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
     <!-- Primary Meta Tags -->
     <title>Let's Help The Next - Supporting International Students</title>
@@ -16,6 +28,7 @@
     <meta name="keywords" content="international students, scholarships, financial assistance, education support, nonprofit, student aid, LHTN, mentorship, visa support" />
     <meta name="author" content="Let's Help The Next" />
     <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="light dark" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -36,9 +49,7 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts - loaded with display=swap for better performance -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -85,6 +96,9 @@
     </script>
   </head>
   <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <noscript>
       <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
         <h1>JavaScript Required</h1>

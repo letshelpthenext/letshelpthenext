@@ -1,45 +1,52 @@
+import { Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Welcome from './screens/Welcome/Welcome';
 import Hero from './components/Hero/Hero';
-// import BlogsHeader from './components/BlogsHeader/BlogsHeader';
-import HomeScreen from './screens/Home/Home';
-import GetInvolvedScreen from './screens/Get-Involved/GetInvolved';
-import OurWorkScreen from './screens/Our-Work/OurWork';
-import OurMissionScreen from './screens/Our-Mission/OurMission';
-// import ContactUsScreen from './screens/Contact-Us/ContactUs';
-// import BlogsScreen from './screens/Blogs/Blogs';
-// import DNWPScreen from './components/Blogs/DNWP';
-import EventsScreen from './screens/Events/Events';
-import NotFoundScreen from './screens/NotFound/NotFound';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Footer from './components/Footer/Footer';
 import './styles/responsive.css';
 
+// Lazy load non-critical routes for better performance
+const HomeScreen = lazy(() => import('./screens/Home/Home'));
+const GetInvolvedScreen = lazy(() => import('./screens/Get-Involved/GetInvolved'));
+const OurWorkScreen = lazy(() => import('./screens/Our-Work/OurWork'));
+const OurMissionScreen = lazy(() => import('./screens/Our-Mission/OurMission'));
+const EventsScreen = lazy(() => import('./screens/Events/Events'));
+const NotFoundScreen = lazy(() => import('./screens/NotFound/NotFound'));
+
 function App() {
   const location = useLocation();
+
+  // Routes that should show the footer
+  const footerRoutes = [
+    '/home',
+    '/home/get-involved',
+    '/home/our-work',
+    '/home/our-mission',
+    '/events'
+  ];
+  const showFooter = footerRoutes.includes(location.pathname);
+
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="events" element={<EventsScreen />} />
-        {/* <Route path="contact-us" element={<ContactUsScreen />} /> */}
-        {/* <Route path="/blogs" element={<BlogsHeader />} >
-          <Route index element={<BlogsScreen />} />
-          <Route path="dnwap" element={<DNWPScreen />} />
-        </Route> */}
-        <Route path="/home" element={<Hero />}>
-          <Route index element={<HomeScreen />} />
-          <Route path="get-involved" element={<GetInvolvedScreen />} />
-          <Route path="our-work" element={<OurWorkScreen />} />
-          <Route path="our-mission" element={<OurMissionScreen />} />
-        </Route>
-        <Route path="*" element={<NotFoundScreen />} />
-      </Routes>
-      { location.pathname === '/home/get-involved' && <Footer />}
-      { location.pathname === '/home/our-work' && <Footer />}
-      { location.pathname === '/home/our-mission' && <Footer />}
-      { location.pathname === '/events' && <Footer />}
-      {/* { location.pathname === '/blogs' && <Footer />} */}
-      { location.pathname === '/home' && <Footer />}
+      <ScrollToTop />
+      <Suspense fallback={<LoadingSpinner fullScreen />}>
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="events" element={<EventsScreen />} />
+            <Route path="/home" element={<Hero />}>
+              <Route index element={<HomeScreen />} />
+              <Route path="get-involved" element={<GetInvolvedScreen />} />
+              <Route path="our-work" element={<OurWorkScreen />} />
+              <Route path="our-mission" element={<OurMissionScreen />} />
+            </Route>
+            <Route path="*" element={<NotFoundScreen />} />
+          </Routes>
+        </main>
+      </Suspense>
+      {showFooter && <Footer />}
     </>
   );
 }

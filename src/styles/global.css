@@ -1,6 +1,74 @@
 /* Global styles and CSS reset */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
 
+/* CSS Custom Properties (Light Mode - Default) */
+:root {
+  /* Colors */
+  --color-primary: #0E7366;
+  --color-primary-light: #D1FAE5;
+  --color-primary-dark: #065F53;
+  --color-secondary: #1F9BCF;
+  --color-secondary-light: #E0F2FE;
+  --color-secondary-dark: #1A7BA0;
+  --color-accent: #F2CFA3;
+
+  /* Neutrals */
+  --color-background: #ffffff;
+  --color-surface: #F9FAFB;
+  --color-text: #374151;
+  --color-text-light: #6B7280;
+  --color-text-dark: #1F2937;
+  --color-border: #E5E7EB;
+
+  /* Feedback */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-primary: #10B981;
+  --color-primary-light: #064E3B;
+  --color-primary-dark: #34D399;
+  --color-secondary: #60A5FA;
+  --color-secondary-light: #1E3A5F;
+  --color-secondary-dark: #93C5FD;
+  --color-accent: #B59758;
+
+  /* Neutrals - Dark mode */
+  --color-background: #111827;
+  --color-surface: #1F2937;
+  --color-text: #E5E7EB;
+  --color-text-light: #9CA3AF;
+  --color-text-dark: #F9FAFB;
+  --color-border: #374151;
+
+  /* Feedback - Dark mode (slightly brighter) */
+  --color-success: #34D399;
+  --color-error: #F87171;
+  --color-warning: #FBBF24;
+  --color-info: #60A5FA;
+
+  /* Shadows - Dark mode */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
 /* CSS Reset and base styles */
 *,
 *::before,
@@ -22,10 +90,11 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #374151;
-  background-color: #ffffff;
+  color: var(--color-text);
+  background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /* Typography */
@@ -34,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 1rem;
-  color: #1F2937;
+  color: var(--color-text-dark);
 }
 
 h1 { font-size: 3rem; }
@@ -51,15 +120,26 @@ p {
 
 /* Links */
 a {
-  color: #1F9BCF;
+  color: var(--color-secondary);
   text-decoration: none;
-  transition: color 0.15s ease-in-out;
+  transition: color var(--transition-fast);
 }
 
 a:hover,
 a:focus {
-  color: #1A7BA0;
+  color: var(--color-secondary-dark);
   text-decoration: underline;
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Buttons */
@@ -75,20 +155,20 @@ a:focus {
   border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.15s ease-in-out;
+  transition: all var(--transition-fast);
   min-height: 2.75rem;
 }
 
 .btn:hover {
   text-decoration: none;
   transform: translateY(-1px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .btn:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgba(31, 155, 207, 0.3);
+  box-shadow: 0 0 0 3px rgba(14, 115, 102, 0.3);
 }
 
 .btn:disabled {
@@ -99,32 +179,32 @@ a:focus {
 
 /* Button variants */
 .btn-primary {
-  background-color: #1F9BCF;
-  border-color: #1F9BCF;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #1A7BA0;
-  border-color: #1A7BA0;
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   color: white;
 }
 
 .btn-secondary {
-  background-color: #F2CFA3;
-  border-color: #F2CFA3;
-  color: #374151;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-dark);
 }
 
 .btn-secondary:hover {
   background-color: #D4A574;
   border-color: #D4A574;
-  color: #374151;
+  color: var(--color-text-dark);
 }
 
 .btn-success {
-  background-color: #10B981;
-  border-color: #10B981;
+  background-color: var(--color-success);
+  border-color: var(--color-success);
   color: white;
 }
 
@@ -136,13 +216,13 @@ a:focus {
 
 .btn-outline {
   background-color: transparent;
-  border-color: #1F9BCF;
-  color: #1F9BCF;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .btn-outline:hover {
-  background-color: #1F9BCF;
-  border-color: #1F9BCF;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: white;
 }
 
@@ -155,7 +235,7 @@ a:focus {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--color-text);
 }
 
 .form-control {
@@ -164,25 +244,25 @@ a:focus {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #374151;
-  background-color: #ffffff;
-  border: 1px solid #D1D5DB;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 0.375rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .form-control:focus {
-  border-color: #1F9BCF;
+  border-color: var(--color-primary);
   outline: 0;
-  box-shadow: 0 0 0 3px rgba(31, 155, 207, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 115, 102, 0.1);
 }
 
 .form-control.is-invalid {
-  border-color: #EF4444;
+  border-color: var(--color-error);
 }
 
 .form-control.is-valid {
-  border-color: #10B981;
+  border-color: var(--color-success);
 }
 
 .invalid-feedback {
@@ -190,7 +270,7 @@ a:focus {
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #EF4444;
+  color: var(--color-error);
 }
 
 .valid-feedback {
@@ -198,24 +278,29 @@ a:focus {
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #10B981;
+  color: var(--color-success);
 }
 
 /* Cards */
 .card {
-  background-color: white;
+  background-color: var(--color-surface);
   border-radius: 0.75rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #E5E7EB;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
   overflow: hidden;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .card-header {
   padding: 1.5rem;
-  background-color: #F9FAFB;
-  border-bottom: 1px solid #E5E7EB;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
   font-weight: 600;
-  color: #374151;
+  color: var(--color-text);
 }
 
 .card-body {
@@ -268,32 +353,51 @@ a:focus {
   border: 0;
 }
 
-/* Focus visible for better accessibility */
-.focus-visible:focus {
-  outline: 2px solid #1F9BCF;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.15s ease-in-out;
-}
-
 /* Skip to content link for accessibility */
 .skip-to-content {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #1F9BCF;
+  background: var(--color-primary);
   color: white;
-  padding: 8px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 4px;
-  z-index: 1000;
+  z-index: 10000;
+  font-weight: 500;
+  transition: top var(--transition-fast);
 }
 
 .skip-to-content:focus {
   top: 6px;
+}
+
+/* Smooth scrolling anchor offset */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+[data-theme="dark"] ::selection {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Media queries for responsive design */

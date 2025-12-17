@@ -177,7 +177,7 @@ const Welcome = () => {
               aria-label={`${value.action} - ${value.quote}`}
             >
               <ValueCard variants={cardVariants} whileHover={{ y: -8 }}>
-                <CardImageContainer backgroundImage={value.image} overlayColor={value.overlayColor}>
+                <CardImageContainer $backgroundImage={value.image} $overlayColor={value.overlayColor}>
                   {/* <CardIcon>{value.icon}</CardIcon> */}
                 </CardImageContainer>
 

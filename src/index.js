@@ -4,17 +4,20 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 import App from './App';
+import { ThemeProvider } from './context/ThemeContext';
 import reportWebVitals from './reportWebVitals';
 import './styles/global.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
-    <HelmetProvider>
-      <Router>
-        <App />
-      </Router>
-    </HelmetProvider>
+    <ThemeProvider>
+      <HelmetProvider>
+        <Router>
+          <App />
+        </Router>
+      </HelmetProvider>
+    </ThemeProvider>
   </StrictMode>
 );
 

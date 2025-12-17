@@ -125,7 +125,7 @@ export const ValueCard = styled(motion.div)`
 export const CardImageContainer = styled.div`
   position: relative;
   height: 200px;
-  background-image: url(${props => props.backgroundImage});
+  background-image: url(${props => props.$backgroundImage});
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -137,7 +137,7 @@ export const CardImageContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${props => props.overlayColor || 'rgba(0, 0, 0, 0.4)'};
+    background: ${props => props.$overlayColor || 'rgba(0, 0, 0, 0.4)'};
     transition: opacity 0.3s ease;
   }
 
