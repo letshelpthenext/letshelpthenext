@@ -23,7 +23,8 @@ import mishma from '../../assets/mishma.png';
 import kwaku from '../../assets/kwaku.JPG';
 import billy from '../../assets/billy.png';
 import kim from '../../assets/kim.jpg';
-import michel from '../../assets/michel.png';
+import michel from '../../assets/michel2.png';
+import natalie from '../../assets/natalie.png';
 
 
 
@@ -49,6 +50,9 @@ const GetInvolved = () => {
   to unlocking a better future for young students and their families. "Where much is given, much is required."`;
 
   const michelBio = `Change can truly happen when one is courageous enough to act. Those who take action to
+  better their own lives are those who will one day be able to help the next!`;
+
+  const natalieBio = `Change can truly happen when one is courageous enough to act. Those who take action to
   better their own lives are those who will one day be able to help the next!`;
 
   return (
@@ -138,16 +142,10 @@ const GetInvolved = () => {
                 memberBio={mishmaBio}
               />
               <TeamMember
-                memberImage={kwaku}
-                memberName="Kwaku Appau-Nkansah"
+                memberImage={michel}
+                memberName="Michel Bergeron"
                 memberDesignation="Executive"
-                memberBio={kwakuBio}
-              />
-              <TeamMember
-                memberImage={billy}
-                memberName="Bidford R. Jean-Baptiste"
-                memberDesignation="Executive"
-                memberBio={billyBio}
+                memberBio={michelBio}
               />
               <TeamMember
                 memberImage={kim}
@@ -156,10 +154,22 @@ const GetInvolved = () => {
                 memberBio={kimBio}
               />
               <TeamMember
-                memberImage={michel}
-                memberName="Michel Bergeron"
+                memberImage={kwaku}
+                memberName="Kwaku Appau-Nkansah"
                 memberDesignation="Executive"
-                memberBio={michelBio}
+                memberBio={kwakuBio}
+              />
+              <TeamMember
+                memberImage={natalie}
+                memberName="Natalie Ward"
+                memberDesignation="Executive"
+                memberBio={natalieBio}
+              />
+              <TeamMember
+                memberImage={billy}
+                memberName="Bidford R. Jean-Baptiste"
+                memberDesignation="Executive"
+                memberBio={billyBio}
               />
             </TeamGrid>
           </Section>
