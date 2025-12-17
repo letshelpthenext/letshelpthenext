@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import AnimatedHamburger from '../AnimatedHamburger/AnimatedHamburger';
 import Logo from '../../assets/whiteLogo.png';
 
 const HeaderWrapper = styled.header`
@@ -60,25 +62,14 @@ const LogoImage = styled.img`
   }
 `;
 
-const NavToggle = styled.button`
+const RightSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${spacing[3]};
+`;
+
+const NavToggleWrapper = styled.div`
   display: none;
-  background: none;
-  border: none;
-  color: ${colors.white};
-  font-size: 1.5rem;
-  padding: ${spacing[2]};
-  border-radius: ${borderRadius.md};
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  &:focus {
-    outline: 2px solid ${colors.white};
-    outline-offset: 2px;
-  }
 
   @media (max-width: ${breakpoints.md}) {
     display: block;
@@ -199,13 +190,19 @@ const Header = () => {
           />
         </LogoLink>
 
-        <NavToggle
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? '✕' : '☰'}
-        </NavToggle>
+        <RightSection>
+          <ThemeToggle />
+
+          <NavToggleWrapper>
+            <AnimatedHamburger
+              isOpen={isMenuOpen}
+              onClick={toggleMenu}
+              color={colors.white}
+              showText={false}
+              ariaLabel={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            />
+          </NavToggleWrapper>
+        </RightSection>
 
         <NavMenu isOpen={isMenuOpen}>
           <NavItem to="/home/get-involved" onClick={closeMenu}>

@@ -3,6 +3,7 @@ import OurStory from '../../components/Our-Story/OurStory';
 import AboutUs from '../../components/About-Us/AboutUs';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import NewsLetterSignUp from '../../components/NewsLetterSignUp/NewsLetterSignUp';
+import ScrollAnimation, { fadeInUp, fadeInLeft, fadeInRight } from '../../components/ScrollAnimation/ScrollAnimation';
 import {
   PageContainer,
   Container,
@@ -19,12 +20,6 @@ import {
 
 
 const Home = () => {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
   return (
     <>
       <Helmet>
@@ -46,53 +41,63 @@ const Home = () => {
 
       <PageContainer>
         <Container>
-          <IntroSection {...fadeInUp}>
-            <IntroTitle>Supporting International Students' Dreams</IntroTitle>
-            <IntroText>
-              At Let's Help The Next, we believe that financial challenges shouldn't stand between
-              talented international students and their educational goals. We provide scholarships,
-              mentorship, and support to help students succeed in their academic journey.
-            </IntroText>
-            <CTASection>
-              <CTAButton
-                href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a"
-                className="primary"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Donate to support international students"
-              >
-                Donate Now
-              </CTAButton>
-              <StyledNavlink
-                to="/home/get-involved"
-                className="secondary"
-                aria-label="Learn how to get involved with our mission"
-              >
-                Get Involved
-              </StyledNavlink>
-            </CTASection>
-          </IntroSection>
+          <ScrollAnimation variants={fadeInUp}>
+            <IntroSection>
+              <IntroTitle>Supporting International Students' Dreams</IntroTitle>
+              <IntroText>
+                At Let's Help The Next, we believe that financial challenges shouldn't stand between
+                talented international students and their educational goals. We provide scholarships,
+                mentorship, and support to help students succeed in their academic journey.
+              </IntroText>
+              <CTASection>
+                <CTAButton
+                  href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a"
+                  className="primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Donate to support international students"
+                >
+                  Donate Now
+                </CTAButton>
+                <StyledNavlink
+                  to="/home/get-involved"
+                  className="secondary"
+                  aria-label="Learn how to get involved with our mission"
+                >
+                  Get Involved
+                </StyledNavlink>
+              </CTASection>
+            </IntroSection>
+          </ScrollAnimation>
 
-          <Section>
-            <SectionTitle>Our Story</SectionTitle>
-            <OurStory />
-          </Section>
-
-          <Divider />
-
-          <Section>
-            <SectionTitle>About Our Mission</SectionTitle>
-            <AboutUs />
-          </Section>
+          <ScrollAnimation variants={fadeInLeft}>
+            <Section>
+              <SectionTitle>Our Story</SectionTitle>
+              <OurStory />
+            </Section>
+          </ScrollAnimation>
 
           <Divider />
 
-          <Section>
-            <SectionTitle>Get In Touch</SectionTitle>
-            <ContactForm />
-          </Section>
+          <ScrollAnimation variants={fadeInRight}>
+            <Section>
+              <SectionTitle>About Our Mission</SectionTitle>
+              <AboutUs />
+            </Section>
+          </ScrollAnimation>
 
-          <NewsLetterSignUp />
+          <Divider />
+
+          <ScrollAnimation variants={fadeInUp}>
+            <Section>
+              <SectionTitle>Get In Touch</SectionTitle>
+              <ContactForm />
+            </Section>
+          </ScrollAnimation>
+
+          <ScrollAnimation variants={fadeInUp}>
+            <NewsLetterSignUp />
+          </ScrollAnimation>
         </Container>
       </PageContainer>
     </>
