@@ -181,12 +181,12 @@ const OurMission = () => {
               <ImpactCard variants={itemVariants}>
                 <ImpactNumber>20+</ImpactNumber>
                 <ImpactLabel>Students Helped</ImpactLabel>
-                <ImpactDescription>International students supported in 2024</ImpactDescription>
+                <ImpactDescription>International students supported in 2025</ImpactDescription>
               </ImpactCard>
               <ImpactCard variants={itemVariants}>
-                <ImpactNumber>$8,985</ImpactNumber>
+                <ImpactNumber>$12,750</ImpactNumber>
                 <ImpactLabel>Financial Aid</ImpactLabel>
-                <ImpactDescription>Total donations distributed in 2024</ImpactDescription>
+                <ImpactDescription>Total donations distributed in 2025</ImpactDescription>
               </ImpactCard>
               <ImpactCard variants={itemVariants}>
                 <ImpactNumber>5+</ImpactNumber>

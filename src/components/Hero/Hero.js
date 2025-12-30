@@ -67,7 +67,7 @@ const HeroEnhanced = () => {
             badge: '🎓 Empowering Students Since 2020',
             stats: [
               { number: '20+', label: 'Students Helped' },
-              { number: '$8,985', label: 'Donated in 2024' },
+              { number: '$1,270', label: 'Donated in 2025' },
               { number: '100%', label: 'Visa Success Rate' }
             ]
           };
@@ -107,6 +107,20 @@ const HeroEnhanced = () => {
             backgroundImage: missionImage,
             mobileImage: missionphone,
             badge: '🌟 Our Purpose',
+            stats: [
+              { number: '100%', label: 'Nonprofit' },
+              { number: '0%', label: 'Admin Fees' },
+              { number: '∞', label: 'Impact' }
+            ]
+          };
+        case '/home/testimonials/':
+          return {
+            title: 'Thank You Notes',
+            subtitle: 'Supporting international students in their educational journey',
+            description: 'Empowering dreams through education, mentorship, and community support.',
+            backgroundImage: missionImage,
+            mobileImage: missionphone,
+            badge: '🎯 Testimonials',
             stats: [
               { number: '100%', label: 'Nonprofit' },
               { number: '0%', label: 'Admin Fees' },
