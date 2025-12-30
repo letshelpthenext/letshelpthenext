@@ -52,8 +52,10 @@ const GetInvolved = () => {
   const michelBio = `Change can truly happen when one is courageous enough to act. Those who take action to
   better their own lives are those who will one day be able to help the next!`;
 
-  const natalieBio = `Change can truly happen when one is courageous enough to act. Those who take action to
-  better their own lives are those who will one day be able to help the next!`;
+  const natalieBio = `I believe that the impact of a college education on an individual is profound. Not only
+  does it enrich and enlighten a person as they learn and use critical thinking skills, but the connections made
+  with people and groups can be life-changing, with a lasting impact. I am forever grateful for the foundational
+  skills that my education has had on my life, and I'm passionate about helping others also have an opportunity to have a college education.`;
 
   return (
     <>
