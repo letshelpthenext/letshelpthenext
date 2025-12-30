@@ -113,7 +113,7 @@ const HeroEnhanced = () => {
               { number: '∞', label: 'Impact' }
             ]
           };
-        case '/home/testimonials':
+        case '/home/testimonials/':
           return {
             title: 'Thank You Notes',
             subtitle: 'Supporting international students in their educational journey',
