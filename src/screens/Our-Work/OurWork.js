@@ -199,14 +199,14 @@ const OurWork = () => {
                     and less on financial worries.
                   </p>
                   <HighlightBox>
-                    <HighlightTitle>2024 Impact</HighlightTitle>
+                    <HighlightTitle>2025 Impact</HighlightTitle>
                     <ImpactStats>
                       <ImpactStat>
-                        <StatNumber>20</StatNumber>
+                        <StatNumber>50+</StatNumber>
                         <StatLabel>Applications</StatLabel>
                       </ImpactStat>
                       <ImpactStat>
-                        <StatNumber>$8,985</StatNumber>
+                        <StatNumber>$12,750</StatNumber>
                         <StatLabel>Donated</StatLabel>
                       </ImpactStat>
                     </ImpactStats>
