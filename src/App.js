@@ -14,6 +14,7 @@ const OurWorkScreen = lazy(() => import('./screens/Our-Work/OurWork'));
 const OurMissionScreen = lazy(() => import('./screens/Our-Mission/OurMission'));
 const EventsScreen = lazy(() => import('./screens/Events/Events'));
 const TestimonialsScreen = lazy(() => import('./screens/Testimonials/Testimonials'));
+const NewsletterScreen = lazy(() => import('./screens/Newsletter/Newsletter'));
 const NotFoundScreen = lazy(() => import('./screens/NotFound/NotFound'));
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
     '/home/our-work',
     '/home/our-mission',
     '/home/testimonials',
-    '/events'
+    '/events',
+    '/newsletter'
   ];
   const showFooter = footerRoutes.includes(location.pathname);
 
@@ -38,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="events" element={<EventsScreen />} />
+            <Route path="newsletter" element={<NewsletterScreen />} />
             <Route path="/home" element={<Hero />}>
               <Route index element={<HomeScreen />} />
               <Route path="get-involved" element={<GetInvolvedScreen />} />
