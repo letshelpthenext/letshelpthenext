@@ -47,9 +47,11 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <FooterNav>
               <FooterLink to="/home" end onClick={handleLinkClick}>Home</FooterLink>
-              <FooterLink to="/home/get-involved" onClick={handleLinkClick}>Get Involved</FooterLink>
+              <FooterLink to="/home/students" onClick={handleLinkClick}>Meet Our Students</FooterLink>
               <FooterLink to="/home/our-work" onClick={handleLinkClick}>Our Work</FooterLink>
               <FooterLink to="/home/our-mission" onClick={handleLinkClick}>Our Mission</FooterLink>
+              <FooterLink to="/home/get-involved" onClick={handleLinkClick}>Get Involved</FooterLink>
+              <FooterLink to="/home/apply" onClick={handleLinkClick}>Apply for a Scholarship</FooterLink>
               <FooterExternalLink
                 href="mailto:letshelpthenext@gmail.com"
                 aria-label="Send us an email"
@@ -98,7 +100,7 @@ const Footer = () => {
         <FooterBottom>
           <Copyright>
             LET'S HELP THE NEXT (LHTN) &copy; 2022 | All rights reserved | Developed with ❤️ by
-            Kwaku Appau-Nkansah
+            Sunsum Apps
           </Copyright>
         </FooterBottom>
       </FooterContent>

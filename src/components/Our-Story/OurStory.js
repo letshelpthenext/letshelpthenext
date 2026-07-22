@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
+import { FOUNDED_YEAR, totals } from '../../data/impact';
 
 const StoryContainer = styled(motion.section)`
   background: ${colors.white};
@@ -169,6 +170,23 @@ const OurStory = () => {
           and make it happen for the applicants. Showing them the path, and
           teaching them self-reliance to create a life for themselves and to bring
           hope to their communities is our objective.
+        </StoryParagraph>
+
+        <StoryParagraph>
+          Since Let's Help The Next was registered as a 501(c)(3) in{' '}
+          {FOUNDED_YEAR}, we have made an impact on the lives of{' '}
+          {totals.studentsHelped} international students from around the globe,
+          studying at universities throughout the United States.
+        </StoryParagraph>
+
+        <StoryParagraph>
+          Our work has been significantly shaped by two of our Adobe board members,
+          Kim Swallow and Natalie Ward. Through their employment at Adobe and their
+          board service, our organization has been awarded significant grants every
+          year to support our mission. We are equally grateful to the supporters who
+          have donated to make this work possible. Our goal is to add to these
+          generous grants through additional donors and fundraising, so we can
+          increase our impact and help more students.
         </StoryParagraph>
       </StoryContent>
     </StoryContainer>

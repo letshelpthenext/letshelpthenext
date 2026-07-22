@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { headlineStats } from '../../data/impact';
 import {
   PageContainer,
   Container,
@@ -39,6 +40,8 @@ import {
   AuthorName,
   AuthorDetails,
   CountryFlag,
+  ViewAllLink,
+  ViewAllWrapper,
   ValuesSection,
   ValuesGrid,
   ValueCard,
@@ -178,26 +181,13 @@ const OurMission = () => {
           <ImpactSection variants={itemVariants}>
             <SectionTitle>Our Impact</SectionTitle>
             <ImpactGrid>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>20+</ImpactNumber>
-                <ImpactLabel>Students Helped</ImpactLabel>
-                <ImpactDescription>International students supported in 2025</ImpactDescription>
-              </ImpactCard>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>$12,750</ImpactNumber>
-                <ImpactLabel>Financial Aid</ImpactLabel>
-                <ImpactDescription>Total donations distributed in 2025</ImpactDescription>
-              </ImpactCard>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>5+</ImpactNumber>
-                <ImpactLabel>Countries</ImpactLabel>
-                <ImpactDescription>Students from different nations</ImpactDescription>
-              </ImpactCard>
-              <ImpactCard variants={itemVariants}>
-                <ImpactNumber>100%</ImpactNumber>
-                <ImpactLabel>Success Rate</ImpactLabel>
-                <ImpactDescription>Students who received visas</ImpactDescription>
-              </ImpactCard>
+              {headlineStats.map((stat) => (
+                <ImpactCard key={stat.label} variants={itemVariants}>
+                  <ImpactNumber>{stat.number}</ImpactNumber>
+                  <ImpactLabel>{stat.label}</ImpactLabel>
+                  <ImpactDescription>{stat.description}</ImpactDescription>
+                </ImpactCard>
+              ))}
             </ImpactGrid>
           </ImpactSection>
 
@@ -237,6 +227,12 @@ const OurMission = () => {
                 </TestimonialCard>
               ))}
             </TestimonialsGrid>
+
+            <ViewAllWrapper>
+              <ViewAllLink to="/home/students">
+                Meet every student we have supported →
+              </ViewAllLink>
+            </ViewAllWrapper>
           </TestimonialsSection>
 
           {/* Values Section */}

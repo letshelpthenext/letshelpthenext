@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import AnimatedHamburger from '../AnimatedHamburger/AnimatedHamburger';
 import Logo from '../../assets/whiteLogo.png';
 
@@ -79,10 +78,10 @@ const NavToggleWrapper = styled.div`
 const NavMenu = styled.nav`
   display: flex;
   align-items: center;
-  gap: ${spacing[6]};
+  gap: ${spacing[4]};
 
-  @media (max-width: ${breakpoints.lg}) {
-    gap: ${spacing[4]};
+  @media (max-width: ${breakpoints.xl}) {
+    gap: ${spacing[2]};
   }
 
   @media (max-width: ${breakpoints.md}) {
@@ -129,9 +128,15 @@ const NavItem = styled(NavLink)`
     font-weight: ${typography.fontWeightSemiBold};
   }
 
+  @media (max-width: ${breakpoints.xl}) {
+    font-size: ${typography.fontSize.sm};
+    padding: ${spacing[2]};
+  }
+
   @media (max-width: ${breakpoints.md}) {
     width: 100%;
     text-align: center;
+    font-size: ${typography.fontSize.base};
     padding: ${spacing[3]} ${spacing[4]};
   }
 `;
@@ -191,8 +196,6 @@ const Header = () => {
         </LogoLink>
 
         <RightSection>
-          <ThemeToggle />
-
           <NavToggleWrapper>
             <AnimatedHamburger
               isOpen={isMenuOpen}
@@ -205,14 +208,20 @@ const Header = () => {
         </RightSection>
 
         <NavMenu isOpen={isMenuOpen}>
-          <NavItem to="/home/get-involved" onClick={closeMenu}>
-            Get Involved
+          <NavItem to="/home/students" onClick={closeMenu}>
+            Our Students
           </NavItem>
           <NavItem to="/home/our-work" onClick={closeMenu}>
             Our Work
           </NavItem>
           <NavItem to="/home/our-mission" onClick={closeMenu}>
             Our Mission
+          </NavItem>
+          <NavItem to="/home/get-involved" onClick={closeMenu}>
+            Get Involved
+          </NavItem>
+          <NavItem to="/home/apply" onClick={closeMenu}>
+            Apply
           </NavItem>
           <DonateButton
             href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a"

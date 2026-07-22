@@ -19,12 +19,12 @@ import {
 import TeamMember from '../../components/TeamMember/TeamMember';
 
 // Team member images
-import mishma from '../../assets/mishma.png';
-import kwaku from '../../assets/kwaku.JPG';
-import billy from '../../assets/billy.png';
-import kim from '../../assets/kim.jpg';
-import michel from '../../assets/michel2.png';
-import natalie from '../../assets/natalie.png';
+import mishma from '../../assets/execs/mishma.png';
+import kwaku from '../../assets/execs/kwaku.JPG';
+import billy from '../../assets/execs/billy.png';
+import kim from '../../assets/execs/kim.jpg';
+import michel from '../../assets/execs/michel2.png';
+import natalie from '../../assets/execs/natalie.png';
 
 
 

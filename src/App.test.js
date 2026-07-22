@@ -62,19 +62,16 @@ jest.mock('framer-motion', () => {
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './context/ThemeContext';
 import App from './App';
 
 // Helper function to render App with all required providers
 const renderWithProviders = (ui) => {
   return render(
-    <ThemeProvider>
-      <HelmetProvider>
-        <BrowserRouter>
-          {ui}
-        </BrowserRouter>
-      </HelmetProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <BrowserRouter>
+        {ui}
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 

@@ -38,37 +38,6 @@
   --transition-slow: 500ms ease;
 }
 
-/* Dark Mode */
-[data-theme="dark"] {
-  --color-primary: #10B981;
-  --color-primary-light: #064E3B;
-  --color-primary-dark: #34D399;
-  --color-secondary: #60A5FA;
-  --color-secondary-light: #1E3A5F;
-  --color-secondary-dark: #93C5FD;
-  --color-accent: #B59758;
-
-  /* Neutrals - Dark mode */
-  --color-background: #111827;
-  --color-surface: #1F2937;
-  --color-text: #E5E7EB;
-  --color-text-light: #9CA3AF;
-  --color-text-dark: #F9FAFB;
-  --color-border: #374151;
-
-  /* Feedback - Dark mode (slightly brighter) */
-  --color-success: #34D399;
-  --color-error: #F87171;
-  --color-warning: #FBBF24;
-  --color-info: #60A5FA;
-
-  /* Shadows - Dark mode */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-}
-
 /* CSS Reset and base styles */
 *,
 *::before,
@@ -76,6 +45,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Windows ships no country-flag emoji font, so regional-indicator pairs render
+   as bare letters ("ZM") instead of flags. This Twemoji subset supplies them.
+   The unicode-range confines it to flag codepoints only, so listing it first in
+   the stack costs nothing for ordinary text. Font: Twemoji (CC-BY 4.0). */
+@font-face {
+  font-family: 'Twemoji Country Flags';
+  src: url('../assets/fonts/TwemojiCountryFlags.woff2') format('woff2');
+  unicode-range: U+1F1E6-1F1FF;
+  font-display: swap;
 }
 
 html {
@@ -86,7 +66,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Twemoji Country Flags', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -99,7 +79,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'Twemoji Country Flags', 'Merriweather', Georgia, serif;
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 1rem;
@@ -381,11 +361,6 @@ html {
 ::selection {
   background-color: var(--color-primary-light);
   color: var(--color-primary-dark);
-}
-
-[data-theme="dark"] ::selection {
-  background-color: var(--color-primary-dark);
-  color: var(--color-primary-light);
 }
 
 /* Reduced motion support */

@@ -183,7 +183,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - **Mishma Buisson** - Founder and visionary behind LHTN
-- **Development Team** - Kwaku Appau-Nkansah and contributors
+- **Development Team** - Sunsum Apps
 - **International Students** - The heart of our mission
 - **Volunteers and Donors** - Making our work possible
 

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { currentCohort, formatCurrency } from '../../data/impact';
 import visaImage from '../../assets/visa.jpeg';
 import {
   PageContainer,
@@ -199,15 +200,15 @@ const OurWork = () => {
                     and less on financial worries.
                   </p>
                   <HighlightBox>
-                    <HighlightTitle>2025 Impact</HighlightTitle>
+                    <HighlightTitle>{currentCohort.year} Impact</HighlightTitle>
                     <ImpactStats>
                       <ImpactStat>
-                        <StatNumber>50+</StatNumber>
-                        <StatLabel>Applications</StatLabel>
+                        <StatNumber>{currentCohort.studentsHelped}</StatNumber>
+                        <StatLabel>Students Helped</StatLabel>
                       </ImpactStat>
                       <ImpactStat>
-                        <StatNumber>$12,750</StatNumber>
-                        <StatLabel>Donated</StatLabel>
+                        <StatNumber>{formatCurrency(currentCohort.raised)}</StatNumber>
+                        <StatLabel>Awarded</StatLabel>
                       </ImpactStat>
                     </ImpactStats>
                   </HighlightBox>

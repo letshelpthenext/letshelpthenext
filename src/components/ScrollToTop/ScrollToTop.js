@@ -64,13 +64,19 @@ const ScrollToTop = ({ showButton = true, scrollThreshold = 300 }) => {
   const { pathname } = useLocation();
   const [isVisible, setIsVisible] = useState(false);
 
+  // Student detail pages open on the student's card rather than the hero, so
+  // they position themselves — see StudentDetail. Every other route goes to top.
+  const isStudentDetail = /^\/home\/students\/[^/]+$/.test(pathname);
+
   // Scroll to top on route change
   useEffect(() => {
+    if (isStudentDetail) return;
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  }, [pathname]);
+  }, [pathname, isStudentDetail]);
 
   // Show/hide button based on scroll position
   useEffect(() => {

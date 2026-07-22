@@ -4,7 +4,7 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Mock window.matchMedia for tests (required by framer-motion and ThemeContext)
+// Mock window.matchMedia for tests (required by framer-motion)
 const mockMatchMedia = jest.fn().mockImplementation(query => {
   return {
     matches: false,

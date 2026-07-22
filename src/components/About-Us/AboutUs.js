@@ -182,19 +182,19 @@ const AboutUs = () => {
           </h4>
           <StatsGrid>
             <StatItem>
-              <StatNumber>500+</StatNumber>
+              <StatNumber>25+</StatNumber>
               <StatLabel>Students Helped</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>$200K+</StatNumber>
+              <StatNumber>$26K+</StatNumber>
               <StatLabel>Scholarships Awarded</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>50+</StatNumber>
+              <StatNumber>17+</StatNumber>
               <StatLabel>Countries Represented</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>95%</StatNumber>
+              <StatNumber>98%</StatNumber>
               <StatLabel>Success Rate</StatLabel>
             </StatItem>
           </StatsGrid>

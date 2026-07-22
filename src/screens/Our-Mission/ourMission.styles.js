@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { colors, spacing, shadows, borderRadius, typography, breakpoints } from '../../styles/tokens';
 
 export const PageContainer = styled(motion.div)`
@@ -337,6 +338,31 @@ export const AuthorDetails = styled.div`
 
 export const CountryFlag = styled.span`
   font-size: ${typography.fontSize.lg};
+`;
+
+export const ViewAllLink = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  gap: ${spacing[2]};
+  margin-top: ${spacing[8]};
+  font-size: ${typography.fontSize.lg};
+  font-weight: ${typography.fontWeightSemiBold};
+  color: ${colors.primary};
+  text-decoration: none;
+
+  &:hover {
+    color: ${colors.primaryDark};
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${colors.primary};
+    outline-offset: 4px;
+  }
+`;
+
+export const ViewAllWrapper = styled.div`
+  text-align: center;
 `;
 
 export const ValuesSection = styled(motion.section)`

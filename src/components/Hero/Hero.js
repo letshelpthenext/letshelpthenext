@@ -32,6 +32,7 @@ import {
   statItemVariants
 } from './hero.styles';
 import Header from '../Header/Header';
+import { totals, formatCurrency, currentCohort, FOUNDED_YEAR } from '../../data/impact';
 import homeImage from '../../assets/home.jpg';
 import getInvolvedImage from '../../assets/getinvolved.jpg';
 import missionImage from '../../assets/mission.jpg';
@@ -55,8 +56,20 @@ const HeroEnhanced = () => {
   });
 
   useEffect(() => {
+    // Every figure below comes from src/data/impact.js. Do not hardcode stats here.
+    const impactStats = [
+      { number: `${totals.studentsHelped}`, label: 'Students Helped' },
+      { number: formatCurrency(totals.totalRaised), label: 'Awarded in Scholarships' },
+      { number: `${totals.countriesRepresented}`, label: 'Countries' }
+    ];
+
     const getHeroData = () => {
-      switch (location.pathname) {
+      // Student detail pages share the Our Students hero.
+      const path = location.pathname.startsWith('/home/students/')
+        ? '/home/students'
+        : location.pathname;
+
+      switch (path) {
         case '/home':
           return {
             title: 'You Are Not Alone',
@@ -64,12 +77,8 @@ const HeroEnhanced = () => {
             description: 'Supporting international students achieve their dreams through mentorship, scholarships, and comprehensive guidance.',
             backgroundImage: homeImage,
             mobileImage: homephone,
-            badge: '🎓 Empowering Students Since 2020',
-            stats: [
-              { number: '20+', label: 'Students Helped' },
-              { number: '$1,270', label: 'Donated in 2025' },
-              { number: '100%', label: 'Visa Success Rate' }
-            ]
+            badge: `🎓 A 501(c)(3) since ${FOUNDED_YEAR}`,
+            stats: impactStats
           };
         case '/home/get-involved':
           return {
@@ -80,8 +89,8 @@ const HeroEnhanced = () => {
             mobileImage: getInvolvedphone,
             badge: '🤝 Join Our Community',
             stats: [
-              { number: '5+', label: 'Countries' },
-              { number: '24/7', label: 'Support' },
+              { number: `${totals.countriesRepresented}`, label: 'Countries' },
+              { number: '100%', label: 'Goes to Students' },
               { number: '100%', label: 'Volunteer Driven' }
             ]
           };
@@ -93,11 +102,7 @@ const HeroEnhanced = () => {
             backgroundImage: workImage,
             mobileImage: workphone,
             badge: '📚 Transforming Lives',
-            stats: [
-              { number: '3+', label: 'Years Experience' },
-              { number: '20+', label: 'Success Stories' },
-              { number: '5+', label: 'Programs' }
-            ]
+            stats: impactStats
           };
         case '/home/our-mission':
           return {
@@ -113,18 +118,28 @@ const HeroEnhanced = () => {
               { number: '∞', label: 'Impact' }
             ]
           };
-        case '/home/testimonials/':
+        case '/home/students':
           return {
-            title: 'Thank You Notes',
-            subtitle: 'Supporting international students in their educational journey',
-            description: 'Empowering dreams through education, mentorship, and community support.',
+            title: 'Meet Our Students',
+            subtitle: 'Determination, resilience, and the courage to keep moving forward',
+            description: 'The recipients are the reason we exist. These are their stories, in their own words.',
             backgroundImage: missionImage,
             mobileImage: missionphone,
-            badge: '🎯 Testimonials',
+            badge: '🌍 Their Stories',
+            stats: impactStats
+          };
+        case '/home/apply':
+          return {
+            title: 'Apply for a Scholarship',
+            subtitle: 'If a balance you cannot close is standing between you and next semester, talk to us',
+            description: 'Need-based scholarships for international students studying in the United States. Free to apply.',
+            backgroundImage: workImage,
+            mobileImage: workphone,
+            badge: '✍️ Applications Open',
             stats: [
-              { number: '100%', label: 'Nonprofit' },
-              { number: '0%', label: 'Admin Fees' },
-              { number: '∞', label: 'Impact' }
+              { number: `${currentCohort.studentsHelped}`, label: `Helped in ${currentCohort.year}` },
+              { number: formatCurrency(currentCohort.raised), label: `Awarded in ${currentCohort.year}` },
+              { number: '$0', label: 'Cost to Apply' }
             ]
           };
         default:
@@ -135,11 +150,7 @@ const HeroEnhanced = () => {
             backgroundImage: homeImage,
             mobileImage: homephone,
             badge: '🎯 Making Dreams Reality',
-            stats: [
-              { number: '20+', label: 'Students' },
-              { number: '$8,985', label: 'Raised' },
-              { number: '5+', label: 'Countries' }
-            ]
+            stats: impactStats
           };
       }
     };
