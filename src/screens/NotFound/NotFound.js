@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
 import {
   NotFoundContainer,
   BackgroundDecoration,
@@ -63,25 +64,25 @@ const NotFound = () => {
       icon: '🏠',
       title: 'Home',
       description: 'Return to our homepage',
-      path: '/home',
+      path: '/',
     },
     {
       icon: '🤝',
       title: 'Get Involved',
       description: 'Join our community',
-      path: '/home/get-involved',
+      path: '/get-involved',
     },
     {
       icon: '🎯',
       title: 'Our Mission',
       description: 'Learn about our goals',
-      path: '/home/our-mission',
+      path: '/our-mission',
     },
     {
       icon: '💼',
       title: 'Our Work',
       description: 'See our impact',
-      path: '/home/our-work',
+      path: '/students',
     },
   ];
 
@@ -107,7 +108,7 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Page Not Found | Let's Help The Next</title>
         <meta
           name="description"

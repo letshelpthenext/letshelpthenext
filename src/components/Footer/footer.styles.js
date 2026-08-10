@@ -68,12 +68,12 @@ export const FooterLink = styled(NavLink)`
 
   &:hover,
   &:focus {
-    color: ${colors.primary};
+    color: ${colors.primaryLight};
     text-decoration: none;
   }
 
   &.active {
-    color: ${colors.primary};
+    color: ${colors.primaryLight};
     font-weight: ${typography.fontWeightMedium};
   }
 `;
@@ -86,9 +86,15 @@ export const FooterExternalLink = styled.a`
 
   &:hover,
   &:focus {
-    color: ${colors.primary};
+    color: ${colors.primaryLight};
     text-decoration: none;
   }
+`;
+export const SocialIcon = styled.img`
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  display: block;
 `;
 
 export const ContactInfo = styled.div`

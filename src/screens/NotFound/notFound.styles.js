@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
+// framer-motion v12 deprecated calling motion() directly in favour of
+// motion.create(); the old form logs a warning on every import of this module.
+const MotionNavLink = motion.create(NavLink);
+
 const colors = {
   primary: '#1e40af',
   secondary: '#3b82f6',
@@ -160,7 +164,7 @@ export const NavigationGrid = styled(motion.div)`
   }
 `;
 
-export const NavigationCard = styled(motion(NavLink))`
+export const NavigationCard = styled(MotionNavLink)`
   background: ${colors.white};
   border-radius: ${borderRadius.xl};
   padding: ${spacing[6]} ${spacing[4]};
@@ -208,7 +212,7 @@ export const CardDescription = styled.p`
   line-height: ${typography.lineHeight.relaxed};
 `;
 
-export const PrimaryButton = styled(motion(NavLink))`
+export const PrimaryButton = styled(MotionNavLink)`
   display: inline-flex;
   align-items: center;
   gap: ${spacing[2]};

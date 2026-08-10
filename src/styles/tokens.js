@@ -1,10 +1,17 @@
 // Design tokens for consistent styling across the application
 
 export const colors = {
-  // Primary color palette (existing colors preserved)
-  primary: '#1F9BCF',
+  // Primary color palette.
+  //
+  // `primary` was #1F9BCF, which only reaches 3.16:1 against white — under the
+  // 4.5:1 WCAG AA floor. It is used both as body-copy colour (47 sites) and as
+  // a solid background under white text (9 sites), so both directions failed.
+  // Darkening one step up the same hue takes it to 4.79:1 and fixes every
+  // one of those at once; `primaryDark` moves down to stay a visible hover
+  // state. `primaryLight` is a background tint only and is unchanged.
+  primary: '#1A7BA0', // 4.79:1 on white
   primaryLight: '#AEE1F4',
-  primaryDark: '#1A7BA0',
+  primaryDark: '#156480', // 6.64:1 on white
 
   // Secondary colors
   secondary: '#F2CFA3',

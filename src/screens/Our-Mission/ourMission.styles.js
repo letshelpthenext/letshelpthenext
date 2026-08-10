@@ -483,7 +483,7 @@ export const CTAButton = styled.a`
   min-width: 200px;
   border: 2px solid ${colors.white};
 
-  ${props => props.secondary ? `
+  ${props => props.$secondary ? `
     background: transparent;
     color: ${colors.white};
 

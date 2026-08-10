@@ -9,18 +9,18 @@ import {
   FooterExternalLink,
   ContactItem,
   ContactInfo,
+  SocialIcon,
   FooterBottom,
   Copyright,
 } from './footer.styles';
+import { scrollToTop } from '../../utilities/scroll';
+import instagramIcon from '../../assets/insta.png';
 
 const Footer = () => {
   // const currentYear = new Date().getFullYear();
 
   const handleLinkClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    scrollToTop();
   };
 
   return (
@@ -46,12 +46,12 @@ const Footer = () => {
           <FooterSection>
             <h3>Quick Links</h3>
             <FooterNav>
-              <FooterLink to="/home" end onClick={handleLinkClick}>Home</FooterLink>
-              <FooterLink to="/home/students" onClick={handleLinkClick}>Meet Our Students</FooterLink>
-              <FooterLink to="/home/our-work" onClick={handleLinkClick}>Our Work</FooterLink>
-              <FooterLink to="/home/our-mission" onClick={handleLinkClick}>Our Mission</FooterLink>
-              <FooterLink to="/home/get-involved" onClick={handleLinkClick}>Get Involved</FooterLink>
-              <FooterLink to="/home/apply" onClick={handleLinkClick}>Apply for a Scholarship</FooterLink>
+              <FooterLink to="/" end onClick={handleLinkClick}>Home</FooterLink>
+              <FooterLink to="/students" onClick={handleLinkClick}>Meet Our Students</FooterLink>
+              <FooterLink to="/our-work" onClick={handleLinkClick}>Our Work</FooterLink>
+              <FooterLink to="/our-mission" onClick={handleLinkClick}>Our Mission</FooterLink>
+              <FooterLink to="/get-involved" onClick={handleLinkClick}>Get Involved</FooterLink>
+              <FooterLink to="/apply" onClick={handleLinkClick}>Apply for a Scholarship</FooterLink>
               <FooterExternalLink
                 href="mailto:letshelpthenext@gmail.com"
                 aria-label="Send us an email"
@@ -71,6 +71,17 @@ const Footer = () => {
                   aria-label="Email us at letshelpthenext@gmail.com"
                 >
                   letshelpthenext@gmail.com
+                </FooterExternalLink>
+              </ContactItem>
+              <ContactItem>
+                <SocialIcon src={instagramIcon} alt="" aria-hidden="true" />
+                <FooterExternalLink
+                  href="https://www.instagram.com/letshelpthenext/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Let's Help The Next on Instagram"
+                >
+                  @letshelpthenext
                 </FooterExternalLink>
               </ContactItem>
               <ContactItem>
