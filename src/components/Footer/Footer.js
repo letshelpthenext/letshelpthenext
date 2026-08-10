@@ -9,10 +9,12 @@ import {
   FooterExternalLink,
   ContactItem,
   ContactInfo,
+  SocialIcon,
   FooterBottom,
   Copyright,
 } from './footer.styles';
 import { scrollToTop } from '../../utilities/scroll';
+import instagramIcon from '../../assets/insta.png';
 
 const Footer = () => {
   // const currentYear = new Date().getFullYear();
@@ -69,6 +71,17 @@ const Footer = () => {
                   aria-label="Email us at letshelpthenext@gmail.com"
                 >
                   letshelpthenext@gmail.com
+                </FooterExternalLink>
+              </ContactItem>
+              <ContactItem>
+                <SocialIcon src={instagramIcon} alt="" aria-hidden="true" />
+                <FooterExternalLink
+                  href="https://www.instagram.com/letshelpthenext/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Let's Help The Next on Instagram"
+                >
+                  @letshelpthenext
                 </FooterExternalLink>
               </ContactItem>
               <ContactItem>
