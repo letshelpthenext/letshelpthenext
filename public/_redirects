@@ -1,1 +1,8 @@
+# The site used to serve every page under /home. Send those URLs to their new
+# root-level equivalents with a real 301 so search engines transfer the ranking
+# instead of relying on the client-side fallback in App.js.
+/home           /           301
+/home/*         /:splat     301
+
+# SPA fallback — must stay last.
 /*  /index.html  200

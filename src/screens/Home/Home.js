@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
 import { Link } from 'react-router-dom';
 import OurStory from '../../components/Our-Story/OurStory';
 import AboutUs from '../../components/About-Us/AboutUs';
@@ -49,7 +50,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Home | Let's Help The Next</title>
         <meta name="description" content="Let's Help The Next provides financial assistance and scholarships to international students studying in the U.S. who face financial difficulties. Supporting education through mentorship and aid." />
         <meta name="keywords" content="international students, scholarships, financial assistance, education support, nonprofit, student aid" />
@@ -86,7 +87,7 @@ const Home = () => {
                   Donate Now
                 </CTAButton>
                 <StyledNavlink
-                  to="/home/get-involved"
+                  to="/get-involved"
                   className="secondary"
                   aria-label="Learn how to get involved with our mission"
                 >
@@ -127,7 +128,7 @@ const Home = () => {
                     </FeaturedEyebrow>
                     <FeaturedName>{featured.name}</FeaturedName>
                     <FeaturedQuote>{featured.intro}</FeaturedQuote>
-                    <FeaturedLink to={`/home/students/${featured.slug}`}>
+                    <FeaturedLink to={`/students/${featured.slug}`}>
                       Read {featured.name.split(' ')[0]}'s story →
                     </FeaturedLink>
                   </div>
@@ -165,7 +166,7 @@ const Home = () => {
                     cannot close is standing between you and next semester, talk to
                     us. It is free to apply, and a person reads every application.
                   </LaneText>
-                  <LaneButton as={Link} to="/home/apply">
+                  <LaneButton as={Link} to="/apply">
                     Apply for a Scholarship
                   </LaneButton>
                 </Lane>

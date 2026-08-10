@@ -9,7 +9,7 @@ export const HeroContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: ${props => `url(${props.backgroundImage})`};
+  background-image: ${props => `url(${props.$backgroundImage})`};
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ export const HeroContainer = styled.div`
   overflow: hidden;
 
   @media (max-width: ${breakpoints.md}) {
-    background-image: ${props => `url(${props.mobileImage})`};
+    background-image: ${props => `url(${props.$mobileImage})`};
     background-attachment: scroll;
   }
 `;

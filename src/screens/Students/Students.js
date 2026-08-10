@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
 import { Link } from 'react-router-dom';
 import { studentsByCohort } from '../../data/students';
 import { cohorts, formatCurrency, totals } from '../../data/impact';
@@ -46,7 +47,7 @@ const Students = () => {
       <Helmet>
         <link
           rel="canonical"
-          href={typeof window !== 'undefined' ? window.location.href : ''}
+          href={canonicalUrl()}
         />
         <title>Meet Our Students - Let's Help The Next</title>
         <meta
@@ -124,7 +125,7 @@ const Students = () => {
               >
                 Support a Student
               </CTAButton>
-              <CTAButton as={Link} to="/home/apply" $secondary>
+              <CTAButton as={Link} to="/apply" $secondary>
                 Apply for a Scholarship
               </CTAButton>
             </CTAButtons>

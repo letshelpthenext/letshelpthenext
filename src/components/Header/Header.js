@@ -93,9 +93,9 @@ const NavMenu = styled.nav`
     flex-direction: column;
     padding: ${spacing[4]};
     box-shadow: ${shadows.lg};
-    transform: translateY(${props => props.isOpen ? '0' : '-100%'});
-    opacity: ${props => props.isOpen ? '1' : '0'};
-    visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+    transform: translateY(${props => props.$isOpen ? '0' : '-100%'});
+    opacity: ${props => props.$isOpen ? '1' : '0'};
+    visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
     transition: all 0.3s ease;
     gap: ${spacing[4]};
   }
@@ -187,11 +187,12 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container>
-        <LogoLink to="/home" onClick={closeMenu}>
+        <LogoLink to="/" end onClick={closeMenu}>
+          {/* Above the fold on every route — must not be deferred. */}
           <LogoImage
             src={Logo}
             alt="Let's Help The Next - Supporting International Students"
-            loading="lazy"
+            loading="eager"
           />
         </LogoLink>
 
@@ -207,20 +208,20 @@ const Header = () => {
           </NavToggleWrapper>
         </RightSection>
 
-        <NavMenu isOpen={isMenuOpen}>
-          <NavItem to="/home/students" onClick={closeMenu}>
-            Our Students
+        <NavMenu $isOpen={isMenuOpen}>
+          <NavItem to="/students" onClick={closeMenu}>
+            Our Impact
           </NavItem>
-          <NavItem to="/home/our-work" onClick={closeMenu}>
+          <NavItem to="/our-work" onClick={closeMenu}>
             Our Work
           </NavItem>
-          <NavItem to="/home/our-mission" onClick={closeMenu}>
+          <NavItem to="/our-mission" onClick={closeMenu}>
             Our Mission
           </NavItem>
-          <NavItem to="/home/get-involved" onClick={closeMenu}>
+          <NavItem to="/get-involved" onClick={closeMenu}>
             Get Involved
           </NavItem>
-          <NavItem to="/home/apply" onClick={closeMenu}>
+          <NavItem to="/apply" onClick={closeMenu}>
             Apply
           </NavItem>
           <DonateButton

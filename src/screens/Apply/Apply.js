@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
 import { totals, formatCurrency, currentCohort } from '../../data/impact';
 import {
   PageContainer,
@@ -120,7 +121,7 @@ const Apply = () => (
     <Helmet>
       <link
         rel="canonical"
-        href={typeof window !== 'undefined' ? window.location.href : ''}
+        href={canonicalUrl()}
       />
       <title>Apply for a Scholarship - Let's Help The Next</title>
       <meta
