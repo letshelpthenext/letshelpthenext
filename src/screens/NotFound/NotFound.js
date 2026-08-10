@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
 import {
   NotFoundContainer,
   BackgroundDecoration,
@@ -107,7 +108,7 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Page Not Found | Let's Help The Next</title>
         <meta
           name="description"

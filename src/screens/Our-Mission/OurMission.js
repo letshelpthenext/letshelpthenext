@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
+import { Link } from 'react-router-dom';
 import { headlineStats } from '../../data/impact';
 import {
   PageContainer,
@@ -110,7 +112,7 @@ const OurMission = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Our Mission - Let's Help The Next</title>
         <meta name="description" content="Our mission is to support vibrant individuals with potential and the will to gain an education to create something extraordinary. Read inspiring testimonials from students we've helped." />
         <meta property="og:title" content="Our Mission - Let's Help The Next" />
@@ -283,9 +285,9 @@ const OurMission = () => {
                 Every contribution makes a difference in someone's life.
               </CTADescription>
               <CTAButtons>
-                <CTAButton href="/home/get-involved">Get Involved</CTAButton>
+                <CTAButton as={Link} to="/get-involved">Get Involved</CTAButton>
                 <CTAButton href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a"
-                          target="_blank" rel="noopener noreferrer" secondary>
+                          target="_blank" rel="noopener noreferrer" $secondary>
                   Donate Now
                 </CTAButton>
               </CTAButtons>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   HeroContainer,
   BackgroundOverlay,
@@ -42,6 +43,12 @@ import getInvolvedphone from '../../assets/getinvolvedphone.jpg';
 import missionphone from '../../assets/missionphone.jpg';
 import workphone from '../../assets/workphone.jpg';
 import logo from '../../assets/whiteLogo.png';
+
+// SecondaryButton is a styled(motion.a). Passing `as={Link}` swapped the
+// underlying element for a plain Link, so whileHover/whileTap had nothing to
+// consume them and React forwarded them to the DOM as unknown attributes —
+// the hover animation never ran. Wrapping Link in motion keeps both working.
+const MotionLink = motion.create(Link);
 
 const HeroEnhanced = () => {
   const location = useLocation();
@@ -164,8 +171,8 @@ const HeroEnhanced = () => {
   return (
     <>
       <HeroContainer
-        backgroundImage={heroData.backgroundImage}
-        mobileImage={heroData.mobileImage}
+        $backgroundImage={heroData.backgroundImage}
+        $mobileImage={heroData.mobileImage}
       >
         <BackgroundOverlay />
         <ParticleEffect />
@@ -224,8 +231,8 @@ const HeroEnhanced = () => {
                     Donate Now
                   </PrimaryButton>
                   <SecondaryButton
-                    as={Link}
-                    to="/home/get-involved"
+                    as={MotionLink}
+                    to="/get-involved"
                     aria-label="Learn more about volunteering opportunities"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}

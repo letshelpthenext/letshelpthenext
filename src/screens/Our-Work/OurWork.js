@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
+import { Link } from 'react-router-dom';
 import { currentCohort, formatCurrency } from '../../data/impact';
 import visaImage from '../../assets/visa.jpeg';
 import {
@@ -77,7 +79,7 @@ const OurWork = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Our Work - Let's Help The Next</title>
         <meta name="description" content="Learn about our initiatives supporting international students through scholarships, mentorship, and comprehensive support programs at BYU-I and beyond." />
         <meta property="og:title" content="Our Work - Let's Help The Next" />
@@ -317,8 +319,8 @@ const OurWork = () => {
                 lives of these students.
               </p>
               <CallToAction>
-                <CTAButton href="/home/get-involved">Get Involved Today</CTAButton>
-                <CTAButton href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" target="_blank" rel="noopener noreferrer" secondary>
+                <CTAButton as={Link} to="/get-involved">Get Involved Today</CTAButton>
+                <CTAButton href="https://www.zeffy.com/en-US/donation-form/868e9c58-5d07-41f6-8daf-ca648cc9dc8a" target="_blank" rel="noopener noreferrer" $secondary>
                   Make a Donation
                 </CTAButton>
               </CallToAction>

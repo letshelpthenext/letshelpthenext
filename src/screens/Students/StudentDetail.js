@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { canonicalUrl } from '../../utilities/seo';
 import { useParams, Navigate } from 'react-router-dom';
 import {
   getStudentBySlug,
@@ -110,7 +111,7 @@ const StudentDetail = () => {
       <Helmet>
         <link
           rel="canonical"
-          href={typeof window !== 'undefined' ? window.location.href : ''}
+          href={canonicalUrl()}
         />
         <title>{`${student.name} - Let's Help The Next`}</title>
         <meta name="description" content={summary} />

@@ -93,9 +93,9 @@ const NavMenu = styled.nav`
     flex-direction: column;
     padding: ${spacing[4]};
     box-shadow: ${shadows.lg};
-    transform: translateY(${props => props.isOpen ? '0' : '-100%'});
-    opacity: ${props => props.isOpen ? '1' : '0'};
-    visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+    transform: translateY(${props => props.$isOpen ? '0' : '-100%'});
+    opacity: ${props => props.$isOpen ? '1' : '0'};
+    visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
     transition: all 0.3s ease;
     gap: ${spacing[4]};
   }
@@ -207,8 +207,8 @@ const Header = () => {
           </NavToggleWrapper>
         </RightSection>
 
-        <NavMenu isOpen={isMenuOpen}>
-          <NavItem to="/home/students" onClick={closeMenu}>
+        <NavMenu $isOpen={isMenuOpen}>
+          <NavItem to="/students" onClick={closeMenu}>
             Our Impact
           </NavItem>
           <NavItem to="/our-work" onClick={closeMenu}>
