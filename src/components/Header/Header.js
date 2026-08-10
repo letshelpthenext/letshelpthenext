@@ -187,11 +187,12 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container>
-        <LogoLink to="/home" onClick={closeMenu}>
+        <LogoLink to="/" end onClick={closeMenu}>
+          {/* Above the fold on every route — must not be deferred. */}
           <LogoImage
             src={Logo}
             alt="Let's Help The Next - Supporting International Students"
-            loading="lazy"
+            loading="eager"
           />
         </LogoLink>
 
