@@ -46,12 +46,12 @@ const Footer = () => {
           <FooterSection>
             <h3>Quick Links</h3>
             <FooterNav>
-              <FooterLink to="/home" end onClick={handleLinkClick}>Home</FooterLink>
-              <FooterLink to="/home/students" onClick={handleLinkClick}>Meet Our Students</FooterLink>
-              <FooterLink to="/home/our-work" onClick={handleLinkClick}>Our Work</FooterLink>
-              <FooterLink to="/home/our-mission" onClick={handleLinkClick}>Our Mission</FooterLink>
-              <FooterLink to="/home/get-involved" onClick={handleLinkClick}>Get Involved</FooterLink>
-              <FooterLink to="/home/apply" onClick={handleLinkClick}>Apply for a Scholarship</FooterLink>
+              <FooterLink to="/" end onClick={handleLinkClick}>Home</FooterLink>
+              <FooterLink to="/students" onClick={handleLinkClick}>Meet Our Students</FooterLink>
+              <FooterLink to="/our-work" onClick={handleLinkClick}>Our Work</FooterLink>
+              <FooterLink to="/our-mission" onClick={handleLinkClick}>Our Mission</FooterLink>
+              <FooterLink to="/get-involved" onClick={handleLinkClick}>Get Involved</FooterLink>
+              <FooterLink to="/apply" onClick={handleLinkClick}>Apply for a Scholarship</FooterLink>
               <FooterExternalLink
                 href="mailto:letshelpthenext@gmail.com"
                 aria-label="Send us an email"

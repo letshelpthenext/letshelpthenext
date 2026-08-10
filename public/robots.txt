@@ -6,10 +6,11 @@ Allow: /
 Sitemap: https://letshelpthenext.org/sitemap.xml
 
 # Helpful hints to crawlers
-Allow: /home
-Allow: /home/get-involved
-Allow: /home/our-work
-Allow: /home/our-mission
+Allow: /students
+Allow: /apply
+Allow: /get-involved
+Allow: /our-work
+Allow: /our-mission
 
 # Block only obvious non-content paths
 Disallow: /test/

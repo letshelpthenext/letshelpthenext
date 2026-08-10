@@ -86,7 +86,7 @@ const Home = () => {
                   Donate Now
                 </CTAButton>
                 <StyledNavlink
-                  to="/home/get-involved"
+                  to="/get-involved"
                   className="secondary"
                   aria-label="Learn how to get involved with our mission"
                 >
@@ -127,7 +127,7 @@ const Home = () => {
                     </FeaturedEyebrow>
                     <FeaturedName>{featured.name}</FeaturedName>
                     <FeaturedQuote>{featured.intro}</FeaturedQuote>
-                    <FeaturedLink to={`/home/students/${featured.slug}`}>
+                    <FeaturedLink to={`/students/${featured.slug}`}>
                       Read {featured.name.split(' ')[0]}'s story →
                     </FeaturedLink>
                   </div>

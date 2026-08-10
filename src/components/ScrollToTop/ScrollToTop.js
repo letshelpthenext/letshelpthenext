@@ -66,7 +66,7 @@ const ScrollToTop = ({ showButton = true, scrollThreshold = 300 }) => {
 
   // Student detail pages open on the student's card rather than the hero, so
   // they position themselves — see StudentDetail. Every other route goes to top.
-  const isStudentDetail = /^\/home\/students\/[^/]+$/.test(pathname);
+  const isStudentDetail = /^\/students\/[^/]+$/.test(pathname);
 
   // Scroll to top on route change
   useEffect(() => {

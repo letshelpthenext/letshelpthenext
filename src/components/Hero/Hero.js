@@ -65,12 +65,12 @@ const HeroEnhanced = () => {
 
     const getHeroData = () => {
       // Student detail pages share the Our Students hero.
-      const path = location.pathname.startsWith('/home/students/')
-        ? '/home/students'
+      const path = location.pathname.startsWith('/students/')
+        ? '/students'
         : location.pathname;
 
       switch (path) {
-        case '/home':
+        case '/':
           return {
             title: 'You Are Not Alone',
             subtitle: 'We are with you every step of your educational journey',
@@ -80,7 +80,7 @@ const HeroEnhanced = () => {
             badge: `🎓 A 501(c)(3) since ${FOUNDED_YEAR}`,
             stats: impactStats
           };
-        case '/home/get-involved':
+        case '/get-involved':
           return {
             title: 'Get Involved',
             subtitle: 'You can be part of the change in students\' lives',
@@ -94,7 +94,7 @@ const HeroEnhanced = () => {
               { number: '100%', label: 'Volunteer Driven' }
             ]
           };
-        case '/home/our-work':
+        case '/our-work':
           return {
             title: 'Our Work',
             subtitle: 'Making education accessible through support and mentorship',
@@ -104,7 +104,7 @@ const HeroEnhanced = () => {
             badge: '📚 Transforming Lives',
             stats: impactStats
           };
-        case '/home/our-mission':
+        case '/our-mission':
           return {
             title: 'Our Mission',
             subtitle: 'Creating a better world through education and opportunity',
@@ -118,7 +118,7 @@ const HeroEnhanced = () => {
               { number: '∞', label: 'Impact' }
             ]
           };
-        case '/home/students':
+        case '/students':
           return {
             title: 'Meet Our Students',
             subtitle: 'Determination, resilience, and the courage to keep moving forward',
@@ -128,7 +128,7 @@ const HeroEnhanced = () => {
             badge: '🌍 Their Stories',
             stats: impactStats
           };
-        case '/home/apply':
+        case '/apply':
           return {
             title: 'Apply for a Scholarship',
             subtitle: 'If a balance you cannot close is standing between you and next semester, talk to us',
@@ -158,7 +158,7 @@ const HeroEnhanced = () => {
     setHeroData(getHeroData());
   }, [location.pathname]);
 
-  const showActions = location.pathname === '/home' || location.pathname === '/';
+  const showActions = location.pathname === '/';
   const showStats = heroData.stats && heroData.stats.length > 0;
 
   return (

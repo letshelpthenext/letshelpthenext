@@ -229,7 +229,7 @@ const OurMission = () => {
             </TestimonialsGrid>
 
             <ViewAllWrapper>
-              <ViewAllLink to="/home/students">
+              <ViewAllLink to="/students">
                 Meet every student we have supported →
               </ViewAllLink>
             </ViewAllWrapper>

@@ -91,7 +91,7 @@ const StudentDetail = () => {
 
   // Unknown or unpublished slug: send them to the index rather than a dead end.
   if (!student || !hasStory(student)) {
-    return <Navigate to="/home/students" replace />;
+    return <Navigate to="/students" replace />;
   }
 
   // Previous/next across the students who actually have a page to visit.
@@ -128,7 +128,7 @@ const StudentDetail = () => {
         animate="visible"
       >
         <Container>
-          <BackLink to="/home/students">← All students</BackLink>
+          <BackLink to="/students">← All students</BackLink>
 
           <StudentHeader ref={headerRef} variants={itemVariants}>
             <PortraitFrame>
@@ -217,7 +217,7 @@ const StudentDetail = () => {
           {(previous || next) && (
             <StudentNav aria-label="Other students">
               {previous ? (
-                <NavLinkStyled to={`/home/students/${previous.slug}`}>
+                <NavLinkStyled to={`/students/${previous.slug}`}>
                   <NavHint>Previous</NavHint>← {previous.name}
                 </NavLinkStyled>
               ) : (
@@ -225,7 +225,7 @@ const StudentDetail = () => {
               )}
               {next && (
                 <NavLinkStyled
-                  to={`/home/students/${next.slug}`}
+                  to={`/students/${next.slug}`}
                   style={{ textAlign: 'right', marginLeft: 'auto' }}
                 >
                   <NavHint>Next</NavHint>

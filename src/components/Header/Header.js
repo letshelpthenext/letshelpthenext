@@ -211,16 +211,16 @@ const Header = () => {
           <NavItem to="/home/students" onClick={closeMenu}>
             Our Impact
           </NavItem>
-          <NavItem to="/home/our-work" onClick={closeMenu}>
+          <NavItem to="/our-work" onClick={closeMenu}>
             Our Work
           </NavItem>
-          <NavItem to="/home/our-mission" onClick={closeMenu}>
+          <NavItem to="/our-mission" onClick={closeMenu}>
             Our Mission
           </NavItem>
-          <NavItem to="/home/get-involved" onClick={closeMenu}>
+          <NavItem to="/get-involved" onClick={closeMenu}>
             Get Involved
           </NavItem>
-          <NavItem to="/home/apply" onClick={closeMenu}>
+          <NavItem to="/apply" onClick={closeMenu}>
             Apply
           </NavItem>
           <DonateButton
