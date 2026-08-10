@@ -287,7 +287,7 @@ I already received the Let's Help The Next need-based scholarship. This helps me
     cohort: 2025,
     university: 'Brigham Young University–Idaho',
     major: 'Political Science, Foreign Affairs',
-    photo: 'Fiori.PNG',
+    photo: 'Fiori.jpg',
     published: true,
     intro:
       'From a small town in northern Albania: "Even in the smallest places, you can dream big — but you also have to work really hard for it."',
@@ -340,7 +340,7 @@ Nini`,
     cohort: 2025,
     university: 'Brigham Young University–Idaho',
     major: 'Software Engineering',
-    photo: 'Gabriel_W.PNG',
+    photo: 'Gabriel_W.jpg',
     published: true,
     intro:
       'He was $800 short on tuition with no way to close the gap before the academic scholarship review. That $800 was the whole semester.',

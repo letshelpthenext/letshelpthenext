@@ -27,7 +27,7 @@ const StudentCard = ({ student }) => {
   const Card = readable ? StudentCardLink : StudentCardStatic;
   const linkProps = readable
     ? {
-        to: `/home/students/${student.slug}`,
+        to: `/students/${student.slug}`,
         'aria-label': `Read ${student.name}'s story`,
       }
     : {};
