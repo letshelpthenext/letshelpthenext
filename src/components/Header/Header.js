@@ -209,7 +209,7 @@ const Header = () => {
 
         <NavMenu isOpen={isMenuOpen}>
           <NavItem to="/home/students" onClick={closeMenu}>
-            Our Students
+            Our Impact
           </NavItem>
           <NavItem to="/home/our-work" onClick={closeMenu}>
             Our Work

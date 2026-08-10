@@ -88,7 +88,7 @@ const Welcome = () => {
       image: liftImage,
       overlayColor:
         'linear-gradient(135deg, rgba(16, 185, 129, 0.8) 0%, rgba(5, 150, 105, 0.9) 100%)',
-      link: '/home/our-work',
+      link: '/home/students',
       action: 'See Our Impact',
     },
   ];

@@ -81,7 +81,7 @@ const NotFound = () => {
       icon: '💼',
       title: 'Our Work',
       description: 'See our impact',
-      path: '/home/our-work',
+      path: '/home/students',
     },
   ];
 
