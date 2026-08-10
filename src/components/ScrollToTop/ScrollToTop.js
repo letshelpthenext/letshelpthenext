@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { colors, shadows, borderRadius, spacing } from '../../styles/tokens';
+import { scrollToTop } from '../../utilities/scroll';
 
 const ScrollButton = styled(motion.button)`
   position: fixed;
@@ -72,10 +73,7 @@ const ScrollToTop = ({ showButton = true, scrollThreshold = 300 }) => {
   useEffect(() => {
     if (isStudentDetail) return;
 
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    scrollToTop();
   }, [pathname, isStudentDetail]);
 
   // Show/hide button based on scroll position
@@ -93,13 +91,6 @@ const ScrollToTop = ({ showButton = true, scrollThreshold = 300 }) => {
     window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, [showButton, scrollThreshold]);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
 
   return (
     <AnimatePresence>

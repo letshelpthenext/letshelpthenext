@@ -12,15 +12,13 @@ import {
   FooterBottom,
   Copyright,
 } from './footer.styles';
+import { scrollToTop } from '../../utilities/scroll';
 
 const Footer = () => {
   // const currentYear = new Date().getFullYear();
 
   const handleLinkClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    scrollToTop();
   };
 
   return (
